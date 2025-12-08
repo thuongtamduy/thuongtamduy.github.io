@@ -1,0 +1,138 @@
+# Apache .htaccess for Salary Calculator
+
+# Enable Rewrite Engine
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Force HTTPS (nếu có SSL)
+    # RewriteCond %{HTTPS} off
+    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    
+    # Remove www (hoặc thêm www tùy preference)
+    # RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    # RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+</IfModule>
+
+# Compression using mod_deflate
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# Browser Caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Images
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+    
+    # CSS and JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    
+    # HTML
+    ExpiresByType text/html "access plus 0 seconds"
+    
+    # Fonts
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+    
+    # Manifest and XML
+    ExpiresByType application/manifest+json "access plus 1 week"
+    ExpiresByType application/xml "access plus 0 seconds"
+    ExpiresByType text/xml "access plus 0 seconds"
+</IfModule>
+
+# Cache-Control Headers
+<IfModule mod_headers.c>
+    # 1 YEAR - Images, Fonts
+    <FilesMatch "\.(jpg|jpeg|png|gif|svg|ico|woff|woff2)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+    
+    # 1 MONTH - CSS, JS
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "max-age=2592000, public"
+    </FilesMatch>
+    
+    # 1 WEEK - Manifest
+    <FilesMatch "\.(json)$">
+        Header set Cache-Control "max-age=604800, public"
+    </FilesMatch>
+    
+    # NO CACHE - HTML
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires 0
+    </FilesMatch>
+    
+    # Security Headers
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Remove Server Signature
+    Header unset Server
+    Header unset X-Powered-By
+</IfModule>
+
+# Custom Error Pages (tùy chọn)
+# ErrorDocument 404 /404.html
+# ErrorDocument 500 /500.html
+
+# Disable Directory Browsing
+Options -Indexes
+
+# Enable FollowSymLinks
+Options +FollowSymLinks
+
+# Protect sensitive files
+<FilesMatch "^(\.htaccess|\.gitignore|package\.json|convert-images\.js|CONVERT_IMAGES\.md)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# UTF-8 Encoding
+AddDefaultCharset UTF-8
+AddCharset UTF-8 .html .css .js .xml .json .rss .atom
+
+# MIME Types
+<IfModule mod_mime.c>
+    AddType application/javascript js
+    AddType text/css css
+    AddType image/svg+xml svg svgz
+    AddType application/manifest+json webmanifest
+    AddType application/x-web-app-manifest+json webapp
+    AddType font/woff woff
+    AddType font/woff2 woff2
+</IfModule>
+
+# Prevent Image Hotlinking (tùy chọn)
+# <IfModule mod_rewrite.c>
+#     RewriteEngine on
+#     RewriteCond %{HTTP_REFERER} !^$
+#     RewriteCond %{HTTP_REFERER} !^https?://(www\.)?salary-calculator\.acorneri\.com [NC]
+#     RewriteRule \.(jpg|jpeg|png|gif|svg)$ - [F,NC]
+# </IfModule>
+

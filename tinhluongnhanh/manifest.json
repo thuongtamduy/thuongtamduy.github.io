@@ -1,0 +1,27 @@
+{
+  "name": "Công cụ tính lương Gross/Net",
+  "short_name": "Tính lương",
+  "description": "Công cụ tính lương Gross/Net chính xác theo quy định 2025. Hỗ trợ tính BHXH, BHYT, BHTN và thuế TNCN.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#667eea",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["finance", "business", "productivity"],
+  "lang": "vi",
+  "dir": "ltr"
+}
+

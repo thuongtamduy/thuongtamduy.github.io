@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="80" fill="white" opacity="0.1"/>
+  <circle cx="1100" cy="530" r="100" fill="white" opacity="0.1"/>
+  <circle cx="200" cy="500" r="60" fill="white" opacity="0.08"/>
+  <circle cx="1000" cy="150" r="70" fill="white" opacity="0.08"/>
+  
+  <!-- Main Icon -->
+  <g filter="url(#shadow)">
+    <circle cx="300" cy="315" r="120" fill="white" opacity="0.95"/>
+    <text x="300" y="360" font-family="Arial, sans-serif" font-size="100" font-weight="bold" fill="#667eea" text-anchor="middle">đ</text>
+  </g>
+  
+  <!-- Calculator icon decoration -->
+  <rect x="240" y="240" width="20" height="20" rx="4" fill="white" opacity="0.7"/>
+  <rect x="270" y="240" width="20" height="20" rx="4" fill="white" opacity="0.7"/>
+  <rect x="300" y="240" width="20" height="20" rx="4" fill="white" opacity="0.7"/>
+  
+  <!-- Text content -->
+  <text x="500" y="250" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="white" text-anchor="start">
+    Công cụ tính lương
+  </text>
+  <text x="500" y="330" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="white" text-anchor="start">
+    Gross/Net
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="500" y="400" font-family="Arial, sans-serif" font-size="32" fill="white" opacity="0.95" text-anchor="start">
+    Cập nhật quy định mới nhất 2025
+  </text>
+  
+  <!-- Features -->
+  <g opacity="0.95">
+    <text x="500" y="470" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="start">
+      ✓ Tính BHXH, BHYT, BHTN chính xác
+    </text>
+    <text x="500" y="510" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="start">
+      ✓ Thuế TNCN theo bậc thang lũy tiến
+    </text>
+    <text x="500" y="550" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="start">
+      ✓ Miễn phí - Dễ sử dụng - Nhanh chóng
+    </text>
+  </g>
+  
+  <!-- Footer brand -->
+  <text x="1100" y="600" font-family="Arial, sans-serif" font-size="20" fill="white" opacity="0.8" text-anchor="end">
+    Acorneri IT Team
+  </text>
+</svg>

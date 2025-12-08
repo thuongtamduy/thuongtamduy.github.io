@@ -1,0 +1,14 @@
+services:
+  salary-calculator:
+    build: .
+    container_name: salary-calculator-app
+    ports:
+      - "3010:80"
+    restart: unless-stopped
+    networks:
+      - salary-network
+
+networks:
+  salary-network:
+    driver: bridge
+
