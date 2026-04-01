@@ -1,37 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- HTML Meta Tags -->
-    <title>Trần Tiến Đạt</title>
-    <meta name="description" content="Thông tin cá nhân">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Trần Tiến Đạt | Digital Profile</title>
+    
+    <link rel="icon" type="image/png" href="https://api.metap.vn/images/thumb-682703-1738502701920.jpg">
 
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://thuongtamduy.com">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Trần Tiến Đạt">
-    <meta property="og:description" content="Thông tin cá nhân">
-    <meta property="og:image" content="https://api.metap.vn/images/thumb-028473-1642499172608.jpg">
-    <meta property="og:image:alt" content="Trần Tiến Đạt">
+    <meta name="title" content="Trần Tiến Đạt | thuongtamduy.com">
+    <meta property="og:url" content="https://thuongtamduy.com/">
+    <meta property="og:title" content="Trần Tiến Đạt | Digital Ecosystem">
+    <meta property="og:image" content="https://api.metap.vn/images/thumb-682703-1738502701920.jpg">
 
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="thuongtamduy.com">
-    <meta property="twitter:url" content="https://thuongtamduy.com">
-    <meta name="twitter:title" content="Trần Tiến Đạt">
-    <meta name="twitter:description" content="Thông tin cá nhân">
-    <meta name="twitter:image" content="https://api.metap.vn/images/thumb-028473-1642499172608.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+    <style>
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+        body {
+            margin: 0; padding: 0; height: 100vh;
+            display: flex; justify-content: center; align-items: center;
+            background: #0a0f1e; font-family: 'Inter', sans-serif;
+            perspective: 1500px; overflow: hidden;
+        }
+
+        .flip-card { 
+            width: 90vw; max-width: 380px; 
+            height: 85vh; max-height: 700px;
+            display: flex;
+        }
+
+        .flip-card-inner {
+            position: relative; width: 100%; height: 100%;
+            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+            border-radius: 30px;
+        }
+
+        /* Desktop: Hover để lật */
+        @media (hover: hover) {
+            .flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+        }
+
+        /* Mobile/Click: Class active để lật */
+        .flip-card.active .flip-card-inner { transform: rotateY(180deg); }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute; width: 100%; height: 100%;
+            -webkit-backface-visibility: hidden; backface-visibility: hidden;
+            border-radius: 30px; overflow: hidden;
+            display: flex; flex-direction: column;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        /* --- Mặt trước --- */
+        .flip-card-front { background: #111827; color: white; justify-content: flex-end; }
+        .avatar-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+        .front-overlay {
+            position: relative; width: 100%; padding: 30px 20px;
+            background: linear-gradient(transparent, rgba(10, 15, 30, 0.98) 45%);
+            text-align: center; z-index: 2;
+        }
+
+        /* --- Mặt sau --- */
+        .flip-card-back {
+            background: rgba(17, 24, 39, 0.98);
+            backdrop-filter: blur(25px);
+            color: white; transform: rotateY(180deg);
+            padding: 20px; box-sizing: border-box;
+            z-index: 5;
+        }
+
+        .tab-switcher {
+            display: flex; gap: 8px; background: rgba(255, 255, 255, 0.05);
+            padding: 5px; border-radius: 100px; margin-bottom: 15px;
+            position: relative; z-index: 100; /* Đảm bảo luôn bấm được */
+        }
+
+        .tab-btn {
+            flex: 1; text-align: center; padding: 10px; border-radius: 100px;
+            cursor: pointer; font-size: 12px; font-weight: 700;
+            color: rgba(255, 255, 255, 0.4); transition: 0.3s;
+        }
+
+        .tab-btn.active { background: #38bdf8; color: #0f172a; }
+
+        .tab-content {
+            display: none; flex-direction: column; gap: 8px;
+            flex-grow: 1; overflow-y: auto; padding-right: 5px;
+            position: relative; z-index: 90;
+        }
+        .tab-content.active { display: flex; }
+
+        .tab-content::-webkit-scrollbar { width: 3px; }
+        .tab-content::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
+
+        .link-item {
+            display: flex; align-items: center; gap: 12px; padding: 12px;
+            background: rgba(255,255,255,0.04); border-radius: 15px;
+            text-decoration: none; color: #f1f5f9; font-size: 13px;
+            transition: 0.2s; border: 1px solid rgba(255, 255, 255, 0.03);
+            flex-shrink: 0;
+        }
+
+        .link-item:hover { background: rgba(56, 189, 248, 0.15); border-color: #38bdf8; }
+        .link-item span { font-size: 20px; width: 25px; text-align: center; }
+
+        .dob { text-align: center; font-size: 10px; opacity: 0.3; margin-top: 10px; flex-shrink: 0; }
+    </style>
 </head>
-
 <body>
-    <iframe src="https://metap.vn/thuongtamduy" frameborder="0"
-        style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0%;left:0px;right:0px;bottom:0px"
-        height="100%" width="100%"></iframe>
-</body>
 
+    <div class="flip-card" id="main-card">
+        <div class="flip-card-inner" id="card-inner">
+            </div>
+    </div>
+
+    <script>
+        // Xử lý lật thẻ cho Mobile (chỉ lật khi không bấm vào nút/link)
+        const card = document.getElementById('main-card');
+        card.addEventListener('click', function(e) {
+            // Nếu bấm vào nút tab hoặc link thì không lật thẻ
+            if (e.target.closest('.tab-btn') || e.target.closest('.link-item')) {
+                return;
+            }
+            this.classList.toggle('active');
+        });
+
+        async function renderCard() {
+            try {
+                const res = await fetch('data.json');
+                const data = await res.json();
+                const container = document.getElementById('card-inner');
+                
+                container.innerHTML = `
+                    <div class="flip-card-front">
+                        <img src="${data.profile.avatar_base64 || data.profile.avatar}" class="avatar-img" alt="Avatar">
+                        <div class="front-overlay">
+                            <h1 style="margin:0; font-size:22px; font-weight:800; text-transform:uppercase;">${data.profile.name}</h1>
+                            <p style="margin:5px 0; font-size:13px; opacity:0.8;">${data.profile.slogan}</p>
+                            <div style="font-size:10px; margin-top:15px; color:#38bdf8; font-weight:600; letter-spacing:1px;">CHẠM ĐỂ KẾT NỐI</div>
+                        </div>
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="tab-switcher">
+                            <div class="tab-btn active" data-tab="contacts">LIÊN HỆ</div>
+                            <div class="tab-btn" data-tab="payments">THANH TOÁN</div>
+                        </div>
+
+                        <div id="tab-contacts" class="tab-content active">
+                            ${data.contacts.map(c => `
+                                <a href="${c.url}" target="_blank" class="link-item">
+                                    <span>${c.icon}</span>
+                                    <div>
+                                        <div style="font-weight:700;">${c.label}</div>
+                                        <div style="font-size:11px; opacity:0.5;">${c.value || ''}</div>
+                                    </div>
+                                </a>
+                            `).join('')}
+                        </div>
+
+                        <div id="tab-payments" class="tab-content">
+                            ${data.payments.map(p => `
+                                <a href="${p.url}" target="_blank" class="link-item">
+                                    <span>${p.icon || '🏦'}</span>
+                                    <div>
+                                        <div style="font-weight:700;">${p.name}</div>
+                                        <div style="font-size:11px; opacity:0.5;">Nhấn để xem mã QR</div>
+                                    </div>
+                                </a>
+                            `).join('')}
+                        </div>
+
+                        <div class="dob">BORN ON ${data.profile.dob} | thuongtamduy.com</div>
+                    </div>
+                `;
+
+                // Gán sự kiện cho các nút tab sau khi render
+                document.querySelectorAll('.tab-btn').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const tabId = this.getAttribute('data-tab');
+                        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                        this.classList.add('active');
+                        document.getElementById('tab-' + tabId).classList.add('active');
+                    });
+                });
+
+            } catch (e) {
+                console.error("Lỗi: Kiểm tra lại file data.json", e);
+            }
+        }
+
+        renderCard();
+    </script>
+</body>
 </html>
