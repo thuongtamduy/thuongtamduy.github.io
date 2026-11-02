@@ -6,7 +6,6 @@
     "dob": "04/11/1998"
   },
   "contacts": [
-    { "label": "Metap Profile", "value": "metap.vn/thuongtamduy", "url": "https://metap.vn/thuongtamduy", "icon": "🆔" },
     { "label": "Website", "value": "datit.pro", "url": "https://datit.pro", "icon": "🌐" },
     { "label": "Phone", "value": "0968046804", "url": "tel:0968046804", "icon": "📞" },
     { "label": "Zalo", "value": "Liên hệ Zalo", "url": "https://zalo.me/0968046804", "icon": "💬" },
