@@ -52,6 +52,11 @@
       "text": "Làm việc trực tiếp với doanh nghiệp để chuyển nhu cầu thành thiết kế hệ thống, và tối ưu quy trình vận hành cho đồng đội."
     },
     {
+      "icon": "users",
+      "title": "Dẫn dắt đội kỹ thuật",
+      "text": "Review code, kèm cặp thành viên, chuẩn hoá Git và môi trường, và làm công cụ để đội tự deploy, tự theo dõi hệ thống."
+    },
+    {
       "icon": "sparkles",
       "title": "AI và dữ liệu",
       "text": "Đưa mô hình ngôn ngữ lớn vào sản phẩm và quy trình, dựng AI agent nối với công cụ qua MCP, và làm dashboard BI trên Apache Superset."

@@ -52,6 +52,11 @@
       "text": "Working directly with the business to turn needs into system design, and streamlining operations for teammates."
     },
     {
+      "icon": "users",
+      "title": "Leading engineering teams",
+      "text": "Code review, mentoring, a standard Git and environment setup, and tooling that lets the team deploy and monitor on its own."
+    },
+    {
       "icon": "sparkles",
       "title": "AI and data",
       "text": "Bring large language models into products and workflows, build AI agents that reach tools through MCP, and ship BI dashboards on Apache Superset."
