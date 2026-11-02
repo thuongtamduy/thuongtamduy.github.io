@@ -200,7 +200,7 @@
         .step a:hover { color: var(--accent); }
 
         /* ---------- Technical map: the system drawn as stacked layers ---------- */
-        .tech-map { padding: 8px 0; }
+        .tech-map { padding: 0; overflow: hidden; }
         .layer-band { display: grid; grid-template-columns: 210px 1fr auto; gap: 20px; align-items: start; padding: 18px 24px; }
         .layer-band + .layer-band { border-top: 1px dashed var(--border); }
         .layer-band.top { background: var(--accent-soft); }
