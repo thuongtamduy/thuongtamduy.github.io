@@ -2,198 +2,535 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Trần Tiến Đạt | Digital Profile</title>
-    
-    <link rel="icon" type="image/png" href="https://api.metap.vn/images/thumb-682703-1738502701920.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Trần Tiến Đạt | thuongtamduy.com</title>
+    <meta name="description" content="Danh thiếp số của Trần Tiến Đạt: liên hệ và thông tin thanh toán.">
+    <meta name="theme-color" content="#0b0f17" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f5f6f8" media="(prefers-color-scheme: light)">
 
-    <meta name="title" content="Trần Tiến Đạt | thuongtamduy.com">
+    <link rel="icon" type="image/jpeg" href="avatar.jpg">
+    <link rel="apple-touch-icon" href="avatar.jpg">
+
+    <meta property="og:type" content="profile">
     <meta property="og:url" content="https://thuongtamduy.com/">
-    <meta property="og:title" content="Trần Tiến Đạt | Digital Ecosystem">
-    <meta property="og:image" content="https://api.metap.vn/images/thumb-682703-1738502701920.jpg">
+    <meta property="og:title" content="Trần Tiến Đạt | thuongtamduy.com">
+    <meta property="og:description" content="Liên hệ và thông tin thanh toán của Trần Tiến Đạt.">
+    <meta property="og:image" content="https://thuongtamduy.com/avatar.jpg">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
     <style>
+        :root {
+            --bg: #0b0f17;
+            --glow: rgba(56, 189, 248, 0.14);
+            --surface: #131925;
+            --surface-2: #1a2130;
+            --border: rgba(255, 255, 255, 0.07);
+            --text: #eef2f7;
+            --muted: #8b95a7;
+            --accent: #38bdf8;
+            --accent-ink: #04121c;
+            --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px rgba(0, 0, 0, 0.25);
+            --radius: 18px;
+        }
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg: #f5f6f8;
+                --glow: rgba(14, 165, 233, 0.12);
+                --surface: #ffffff;
+                --surface-2: #eef1f5;
+                --border: rgba(15, 23, 42, 0.08);
+                --text: #0f172a;
+                --muted: #5b6577;
+                --accent: #0284c7;
+                --accent-ink: #ffffff;
+                --shadow: 0 1px 2px rgba(15, 23, 42, 0.05), 0 8px 24px rgba(15, 23, 42, 0.06);
+            }
+        }
+
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-
+        html { color-scheme: light dark; }
         body {
-            margin: 0; padding: 0; height: 100vh;
-            display: flex; justify-content: center; align-items: center;
-            background: #0a0f1e; font-family: 'Inter', sans-serif;
-            perspective: 1500px; overflow: hidden;
+            margin: 0;
+            min-height: 100vh;
+            min-height: 100dvh;
+            background:
+                radial-gradient(600px 360px at 50% -80px, var(--glow), transparent 70%),
+                var(--bg);
+            color: var(--text);
+            font-family: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', sans-serif;
+            font-size: 15px;
+            line-height: 1.45;
+            -webkit-font-smoothing: antialiased;
+        }
+        button { font: inherit; color: inherit; }
+        svg { display: block; flex-shrink: 0; }
+
+        .page {
+            max-width: 440px;
+            margin: 0 auto;
+            padding: max(40px, env(safe-area-inset-top)) 16px max(32px, env(safe-area-inset-bottom));
         }
 
-        .flip-card { 
-            width: 90vw; max-width: 380px; 
-            height: 85vh; max-height: 700px;
-            display: flex;
+        /* ---------- Hero ---------- */
+        .hero { text-align: center; }
+        .avatar {
+            display: inline-block;
+            width: 116px; height: 116px;
+            border-radius: 50%;
+            object-fit: cover;
+            padding: 4px;
+            background: conic-gradient(from 200deg, var(--accent), #a78bfa, #f472b6, var(--accent));
+            box-shadow: var(--shadow);
         }
-
-        .flip-card-inner {
-            position: relative; width: 100%; height: 100%;
-            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-            transform-style: preserve-3d;
-            border-radius: 30px;
+        .avatar-inner {
+            display: block; width: 100%; height: 100%;
+            border-radius: 50%; object-fit: cover;
+            border: 3px solid var(--bg);
         }
-
-        /* Desktop: Hover để lật */
-        @media (hover: hover) {
-            .flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+        h1 {
+            margin: 18px 0 4px;
+            font-size: 24px; font-weight: 700;
+            letter-spacing: -0.01em;
         }
+        .slogan { margin: 0; color: var(--muted); font-style: italic; }
 
-        /* Mobile/Click: Class active để lật */
-        .flip-card.active .flip-card-inner { transform: rotateY(180deg); }
-
-        .flip-card-front, .flip-card-back {
-            position: absolute; width: 100%; height: 100%;
-            -webkit-backface-visibility: hidden; backface-visibility: hidden;
-            border-radius: 30px; overflow: hidden;
-            display: flex; flex-direction: column;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        /* ---------- Quick actions ---------- */
+        .actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1.4fr;
+            gap: 10px;
+            margin: 26px 0 28px;
         }
-
-        /* --- Mặt trước --- */
-        .flip-card-front { background: #111827; color: white; justify-content: flex-end; }
-        .avatar-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
-        .front-overlay {
-            position: relative; width: 100%; padding: 30px 20px;
-            background: linear-gradient(transparent, rgba(10, 15, 30, 0.98) 45%);
-            text-align: center; z-index: 2;
+        .action {
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            height: 48px; padding: 0 12px;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text);
+            font-weight: 600; font-size: 14px;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            transition: transform .15s ease, background .15s ease;
         }
+        .action:hover { background: var(--surface-2); }
+        .action:active { transform: scale(0.97); }
+        .action.primary { background: var(--accent); color: var(--accent-ink); border-color: transparent; }
+        .action.primary:hover { filter: brightness(1.07); }
 
-        /* --- Mặt sau --- */
-        .flip-card-back {
-            background: rgba(17, 24, 39, 0.98);
-            backdrop-filter: blur(25px);
-            color: white; transform: rotateY(180deg);
-            padding: 20px; box-sizing: border-box;
-            z-index: 5;
+        /* ---------- CV / Portfolio links ---------- */
+        .pages { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: -14px 0 24px; }
+        .page-link {
+            display: flex; align-items: center; gap: 12px;
+            padding: 12px 14px;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            box-shadow: var(--shadow);
+            text-decoration: none; color: var(--text);
+            transition: background .15s, transform .15s;
         }
+        .page-link:hover { background: var(--surface-2); }
+        .page-link:active { transform: scale(0.98); }
+        .page-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+        .page-link .tile { width: 36px; height: 36px; border-radius: 10px; }
+        .page-link b { display: block; font-size: 14px; font-weight: 600; }
+        .page-link small { display: block; font-size: 12px; color: var(--muted); }
 
-        .tab-switcher {
-            display: flex; gap: 8px; background: rgba(255, 255, 255, 0.05);
-            padding: 5px; border-radius: 100px; margin-bottom: 15px;
-            position: relative; z-index: 100; /* Đảm bảo luôn bấm được */
+        /* ---------- Tabs ---------- */
+        .tabs {
+            position: relative;
+            display: grid; grid-template-columns: 1fr 1fr;
+            padding: 4px;
+            border-radius: 14px;
+            background: var(--surface-2);
+            margin-bottom: 14px;
         }
-
-        .tab-btn {
-            flex: 1; text-align: center; padding: 10px; border-radius: 100px;
-            cursor: pointer; font-size: 12px; font-weight: 700;
-            color: rgba(255, 255, 255, 0.4); transition: 0.3s;
+        .tab-indicator {
+            position: absolute; top: 4px; bottom: 4px; left: 4px;
+            width: calc(50% - 4px);
+            border-radius: 10px;
+            background: var(--surface);
+            box-shadow: var(--shadow);
+            transition: transform .25s cubic-bezier(.4, 0, .2, 1);
         }
-
-        .tab-btn.active { background: #38bdf8; color: #0f172a; }
-
-        .tab-content {
-            display: none; flex-direction: column; gap: 8px;
-            flex-grow: 1; overflow-y: auto; padding-right: 5px;
-            position: relative; z-index: 90;
+        .tabs[data-active="payments"] .tab-indicator { transform: translateX(100%); }
+        .tab {
+            position: relative; z-index: 1;
+            border: 0; background: none;
+            height: 40px;
+            font-weight: 600; font-size: 14px;
+            color: var(--muted);
+            cursor: pointer;
+            transition: color .2s;
         }
-        .tab-content.active { display: flex; }
+        .tab[aria-selected="true"] { color: var(--text); }
 
-        .tab-content::-webkit-scrollbar { width: 3px; }
-        .tab-content::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
-
-        .link-item {
-            display: flex; align-items: center; gap: 12px; padding: 12px;
-            background: rgba(255,255,255,0.04); border-radius: 15px;
-            text-decoration: none; color: #f1f5f9; font-size: 13px;
-            transition: 0.2s; border: 1px solid rgba(255, 255, 255, 0.03);
+        /* ---------- List ---------- */
+        .panel[hidden] { display: none; }
+        .list {
+            margin: 0; padding: 0; list-style: none;
+            border-radius: var(--radius);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        .list li + li { border-top: 1px solid var(--border); }
+        .row {
+            display: flex; align-items: center; gap: 14px;
+            width: 100%;
+            padding: 12px 14px;
+            border: 0; background: none;
+            text-align: left;
+            color: inherit; text-decoration: none;
+            cursor: pointer;
+            transition: background .15s;
+        }
+        .row:hover { background: var(--surface-2); }
+        .row:focus-visible, .action:focus-visible, .tab:focus-visible, .btn:focus-visible {
+            outline: 2px solid var(--accent); outline-offset: 2px;
+        }
+        .tile {
+            width: 42px; height: 42px;
+            border-radius: 12px;
+            display: grid; place-items: center;
+            color: var(--c, var(--text));
+            background: color-mix(in srgb, var(--c, var(--text)) 14%, transparent);
             flex-shrink: 0;
         }
+        .row-text { flex: 1; min-width: 0; }
+        .row-title { display: block; font-weight: 600; }
+        .row-sub {
+            display: block;
+            color: var(--muted); font-size: 13px;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+        .row-end { color: var(--muted); opacity: .7; }
 
-        .link-item:hover { background: rgba(56, 189, 248, 0.15); border-color: #38bdf8; }
-        .link-item span { font-size: 20px; width: 25px; text-align: center; }
+        .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-        .dob { text-align: center; font-size: 10px; opacity: 0.3; margin-top: 10px; flex-shrink: 0; }
+        footer {
+            display: flex; flex-direction: column; align-items: center; gap: 14px;
+            margin-top: 28px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+        .share {
+            display: inline-flex; align-items: center; gap: 8px;
+            height: 42px; padding: 0 18px;
+            border: 1px dashed color-mix(in srgb, var(--accent) 45%, transparent);
+            border-radius: 999px;
+            background: color-mix(in srgb, var(--accent) 8%, transparent);
+            color: var(--accent);
+            font-weight: 600; font-size: 14px;
+            cursor: pointer;
+            transition: background .15s, transform .15s;
+        }
+        .share:hover { background: color-mix(in srgb, var(--accent) 15%, transparent); }
+        .share:active { transform: scale(0.97); }
+        .share:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+        /* ---------- QR dialog ---------- */
+        dialog {
+            width: min(360px, calc(100vw - 32px));
+            padding: 0;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            background: var(--surface);
+            color: var(--text);
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+        }
+        dialog::backdrop { background: rgba(5, 8, 14, 0.6); backdrop-filter: blur(6px); }
+        dialog[open] { animation: pop .22s cubic-bezier(.2, .9, .3, 1.2); }
+        .dlg-head {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 16px 16px 0 20px;
+        }
+        .dlg-head h2 { margin: 0; font-size: 17px; }
+        .icon-btn {
+            width: 36px; height: 36px;
+            display: grid; place-items: center;
+            border: 0; border-radius: 50%;
+            background: var(--surface-2);
+            cursor: pointer;
+        }
+        .dlg-body { padding: 16px 20px 20px; }
+        .qr {
+            display: block; width: 100%; aspect-ratio: 1 / 1.1;
+            object-fit: contain;
+            border-radius: 16px;
+            background: #fff;
+        }
+        .acct {
+            display: flex; align-items: center; justify-content: space-between; gap: 12px;
+            margin-top: 14px; padding: 12px 14px;
+            border-radius: 14px;
+            background: var(--surface-2);
+        }
+        .acct small { display: block; color: var(--muted); font-size: 12px; }
+        .acct strong { font-size: 18px; letter-spacing: 0.04em; font-variant-numeric: tabular-nums; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            height: 38px; padding: 0 14px;
+            border: 0; border-radius: 10px;
+            background: var(--accent); color: var(--accent-ink);
+            font-weight: 600; font-size: 14px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+        .dlg-foot { display: flex; justify-content: center; margin-top: 12px; }
+
+        /* ---------- Toast ---------- */
+        .toast {
+            position: fixed; left: 50%; bottom: max(24px, env(safe-area-inset-bottom));
+            transform: translate(-50%, 20px);
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: var(--text); color: var(--bg);
+            font-size: 14px; font-weight: 500;
+            opacity: 0; pointer-events: none;
+            transition: opacity .2s, transform .2s;
+            z-index: 10;
+        }
+        .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+        /* ---------- Motion ---------- */
+        .reveal { animation: rise .5s cubic-bezier(.2, .8, .2, 1) both; }
+        .reveal:nth-child(2) { animation-delay: .06s; }
+        .reveal:nth-child(3) { animation-delay: .12s; }
+        .reveal:nth-child(4) { animation-delay: .18s; }
+        .reveal:nth-child(5) { animation-delay: .24s; }
+        @keyframes rise { from { opacity: 0; transform: translateY(12px); } }
+        @keyframes pop { from { opacity: 0; transform: scale(.94); } }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation: none !important; transition: none !important; }
+        }
     </style>
 </head>
 <body>
+    <main class="page" id="app"></main>
 
-    <div class="flip-card" id="main-card">
-        <div class="flip-card-inner" id="card-inner">
+    <dialog id="qr-dialog" aria-labelledby="qr-title">
+        <div class="dlg-head">
+            <h2 id="qr-title"></h2>
+            <button class="icon-btn" type="button" data-close aria-label="Đóng"></button>
+        </div>
+        <div class="dlg-body">
+            <img class="qr" id="qr-img" alt="">
+            <div class="acct">
+                <div>
+                    <small>Số tài khoản</small>
+                    <strong id="qr-acct"></strong>
+                </div>
+                <button class="btn" type="button" id="qr-copy"></button>
             </div>
-    </div>
+            <div class="dlg-foot">
+                <a class="btn ghost" id="qr-open" target="_blank" rel="noopener"></a>
+            </div>
+        </div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status"></div>
 
     <script>
-        // Xử lý lật thẻ cho Mobile (chỉ lật khi không bấm vào nút/link)
-        const card = document.getElementById('main-card');
-        card.addEventListener('click', function(e) {
-            // Nếu bấm vào nút tab hoặc link thì không lật thẻ
-            if (e.target.closest('.tab-btn') || e.target.closest('.link-item')) {
-                return;
-            }
-            this.classList.toggle('active');
-        });
+        /* Icon: brand marks from Simple Icons (CC0), UI icons in Lucide style */
+        const BRAND = {"github": "M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12", "tiktok": "M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z", "messenger": "M.001 11.639C.001 4.949 5.241 0 12.001 0S24 4.95 24 11.639c0 6.689-5.24 11.638-12 11.638-1.21 0-2.38-.16-3.47-.46a.96.96 0 00-.64.05l-2.39 1.05a.96.96 0 01-1.35-.85l-.07-2.14a.97.97 0 00-.32-.68A11.39 11.389 0 01.002 11.64zm8.32-2.19l-3.52 5.6c-.35.53.32 1.139.82.75l3.79-2.87c.26-.2.6-.2.87 0l2.8 2.1c.84.63 2.04.4 2.6-.48l3.52-5.6c.35-.53-.32-1.13-.82-.75l-3.79 2.87c-.25.2-.6.2-.86 0l-2.8-2.1a1.8 1.8 0 00-2.61.48z", "zalo": "M12.49 10.2722v-.4496h1.3467v6.3218h-.7704a.576.576 0 01-.5763-.5729l-.0006.0005a3.273 3.273 0 01-1.9372.6321c-1.8138 0-3.2844-1.4697-3.2844-3.2823 0-1.8125 1.4706-3.2822 3.2844-3.2822a3.273 3.273 0 011.9372.6321l.0006.0005zM6.9188 7.7896v.205c0 .3823-.051.6944-.2995 1.0605l-.03.0343c-.0542.0615-.1815.206-.2421.2843L2.024 14.8h4.8948v.7682a.5764.5764 0 01-.5767.5761H0v-.3622c0-.4436.1102-.6414.2495-.8476L4.8582 9.23H.1922V7.7896h6.7266zm8.5513 8.3548a.4805.4805 0 01-.4803-.4798v-7.875h1.4416v8.3548H15.47zM20.6934 9.6C22.52 9.6 24 11.0807 24 12.9044c0 1.8252-1.4801 3.306-3.3066 3.306-1.8264 0-3.3066-1.4808-3.3066-3.306 0-1.8237 1.4802-3.3044 3.3066-3.3044zm-10.1412 5.253c1.0675 0 1.9324-.8645 1.9324-1.9312 0-1.065-.865-1.9295-1.9324-1.9295s-1.9324.8644-1.9324 1.9295c0 1.0667.865 1.9312 1.9324 1.9312zm10.1412-.0033c1.0737 0 1.945-.8707 1.945-1.9453 0-1.073-.8713-1.9436-1.945-1.9436-1.0753 0-1.945.8706-1.945 1.9436 0 1.0746.8697 1.9453 1.945 1.9453z"};
+        const UI = {
+            globe: '<circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
+            phone: '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>',
+            mail: '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>',
+            bank: '<path d="M3 22h18"/><path d="M6 18v-7"/><path d="M10 18v-7"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M12 2 20 7H4z"/>',
+            wallet: '<path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/>',
+            userPlus: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6"/><path d="M22 11h-6"/>',
+            copy: '<rect x="8" y="8" width="14" height="14" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>',
+            arrow: '<path d="M7 7h10v10"/><path d="M7 17 17 7"/>',
+            chevron: '<path d="m9 18 6-6-6-6"/>',
+            x: '<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
+            download: '<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/>',
+            share: '<path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="m16 6-4-4-4 4"/><path d="M12 2v13"/>',
+            file: '<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 13H8"/><path d="M16 17H8"/><path d="M16 13h-2"/>',
+            grid: '<rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/>',
+            tool: '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>'
+        };
+        const COLOR = { zalo: '#0068ff', messenger: '#0a7cff', globe: '#38bdf8', phone: '#22c55e', mail: '#f59e0b', bank: '#8b5cf6', wallet: '#d6336c', tool: '#14b8a6', file: '#38bdf8', grid: '#a78bfa' };
 
-        async function renderCard() {
+        function icon(name, size = 20) {
+            if (BRAND[name]) {
+                return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="${BRAND[name]}"/></svg>`;
+            }
+            return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${UI[name] || UI.globe}</svg>`;
+        }
+        function tile(name) {
+            return `<span class="tile"${COLOR[name] ? ` style="--c:${COLOR[name]}"` : ''}>${icon(name, 21)}</span>`;
+        }
+        /* One list row: a link, or a button when `data` attrs are given */
+        function row({ icon: ic, title, sub, href, attrs }) {
+            const inner = `${tile(ic)}
+                <span class="row-text"><span class="row-title">${esc(title)}</span>${sub ? `<span class="row-sub">${esc(sub)}</span>` : ''}</span>
+                <span class="row-end">${icon(href ? 'arrow' : 'chevron', 18)}</span>`;
+            const ext = /^https?:/.test(href) ? ' target="_blank" rel="noopener"' : '';
+            return `<li>${href ? `<a class="row" href="${esc(href)}"${ext}>${inner}</a>` : `<button class="row" type="button" ${attrs}>${inner}</button>`}</li>`;
+        }
+        const $ = id => document.getElementById(id);
+        const esc = s => String(s ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+
+        /* Toast */
+        const toastEl = $('toast');
+        let toastTimer;
+        function toast(msg) {
+            toastEl.textContent = msg;
+            toastEl.classList.add('show');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => toastEl.classList.remove('show'), 1800);
+        }
+        async function copy(text) {
             try {
-                const res = await fetch('data.json');
-                const data = await res.json();
-                const container = document.getElementById('card-inner');
-                
-                container.innerHTML = `
-                    <div class="flip-card-front">
-                        <img src="${data.profile.avatar_base64 || data.profile.avatar}" class="avatar-img" alt="Avatar">
-                        <div class="front-overlay">
-                            <h1 style="margin:0; font-size:22px; font-weight:800; text-transform:uppercase;">${data.profile.name}</h1>
-                            <p style="margin:5px 0; font-size:13px; opacity:0.8;">${data.profile.slogan}</p>
-                            <div style="font-size:10px; margin-top:15px; color:#38bdf8; font-weight:600; letter-spacing:1px;">CHẠM ĐỂ KẾT NỐI</div>
-                        </div>
-                    </div>
-                    <div class="flip-card-back">
-                        <div class="tab-switcher">
-                            <div class="tab-btn active" data-tab="contacts">LIÊN HỆ</div>
-                            <div class="tab-btn" data-tab="payments">THANH TOÁN</div>
-                        </div>
-
-                        <div id="tab-contacts" class="tab-content active">
-                            ${data.contacts.map(c => `
-                                <a href="${c.url}" target="_blank" class="link-item">
-                                    <span>${c.icon}</span>
-                                    <div>
-                                        <div style="font-weight:700;">${c.label}</div>
-                                        <div style="font-size:11px; opacity:0.5;">${c.value || ''}</div>
-                                    </div>
-                                </a>
-                            `).join('')}
-                        </div>
-
-                        <div id="tab-payments" class="tab-content">
-                            ${data.payments.map(p => `
-                                <a href="${p.url}" target="_blank" class="link-item">
-                                    <span>${p.icon || '🏦'}</span>
-                                    <div>
-                                        <div style="font-weight:700;">${p.name}</div>
-                                        <div style="font-size:11px; opacity:0.5;">Nhấn để xem mã QR</div>
-                                    </div>
-                                </a>
-                            `).join('')}
-                        </div>
-
-                        <div class="dob">BORN ON ${data.profile.dob} | thuongtamduy.com</div>
-                    </div>
-                `;
-
-                // Gán sự kiện cho các nút tab sau khi render
-                document.querySelectorAll('.tab-btn').forEach(btn => {
-                    btn.addEventListener('click', function() {
-                        const tabId = this.getAttribute('data-tab');
-                        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-                        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-                        this.classList.add('active');
-                        document.getElementById('tab-' + tabId).classList.add('active');
-                    });
-                });
-
-            } catch (e) {
-                console.error("Lỗi: Kiểm tra lại file data.json", e);
+                await navigator.clipboard.writeText(text);
+            } catch {
+                const ta = Object.assign(document.createElement('textarea'), { value: text });
+                document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove();
             }
+            toast('Đã chép ' + text);
         }
 
-        renderCard();
+        /* vCard */
+        function saveContact(data) {
+            const find = prefix => (data.contacts.find(c => c.url?.startsWith(prefix))?.url || '').slice(prefix.length);
+            const web = data.contacts.find(c => c.icon === 'globe')?.url;
+            const [d, m, y] = (data.profile.dob || '').split('/');
+            const name = data.profile.name;
+            const lines = [
+                'BEGIN:VCARD', 'VERSION:3.0',
+                `FN:${name}`,
+                `N:${name.split(' ').slice(-1)[0]};${name.split(' ').slice(0, -1).join(' ')};;;`,
+                find('tel:') && `TEL;TYPE=CELL:${find('tel:')}`,
+                ...data.contacts.filter(c => c.url?.startsWith('mailto:')).map(c => `EMAIL;TYPE=INTERNET:${c.url.slice(7)}`),
+                web && `URL:${web}`,
+                'URL:https://thuongtamduy.com',
+                y && `BDAY:${y}-${m}-${d}`,
+                'END:VCARD'
+            ].filter(Boolean);
+            const blob = new Blob([lines.join('\r\n')], { type: 'text/vcard;charset=utf-8' });
+            const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(blob), download: 'tran-tien-dat.vcf' });
+            document.body.appendChild(a); a.click(); a.remove();
+            setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+        }
+
+        /* QR dialog */
+        const dlg = $('qr-dialog');
+        const closeBtn = dlg.querySelector('[data-close]');
+        closeBtn.innerHTML = icon('x', 18);
+        closeBtn.addEventListener('click', () => dlg.close());
+        $('qr-copy').innerHTML = icon('copy', 16) + 'Chép';
+        $('qr-copy').addEventListener('click', () => copy($('qr-acct').textContent));
+        $('qr-open').innerHTML = icon('download', 16) + 'Mở ảnh QR';
+        dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+        function openQR(p) {
+            $('qr-title').textContent = p.name;
+            Object.assign($('qr-img'), { src: p.qr, alt: 'Mã QR chuyển khoản ' + p.name });
+            $('qr-acct').textContent = p.account;
+            $('qr-open').href = p.qr;
+            dlg.showModal();
+        }
+
+        /* Render */
+        async function render() {
+            const app = $('app');
+            let data;
+            try {
+                data = await (await fetch('data.json', { cache: 'no-cache' })).json();
+            } catch (e) {
+                app.innerHTML = '<p style="text-align:center;color:var(--muted)">Không tải được dữ liệu.</p>';
+                console.error(e);
+                return;
+            }
+            const { profile, contacts, payments } = data;
+            const tel = contacts.find(c => c.url?.startsWith('tel:'));
+            const zalo = contacts.find(c => c.icon === 'zalo');
+
+            app.innerHTML = `
+                <header class="hero reveal">
+                    <div class="avatar"><img class="avatar-inner" src="${esc(profile.avatar)}" alt="${esc(profile.name)}" width="108" height="108"></div>
+                    <h1>${esc(profile.name)}</h1>
+                    <p class="slogan">${esc(profile.slogan)}</p>
+                </header>
+
+                <nav class="actions reveal" aria-label="Liên hệ nhanh">
+                    ${tel ? `<a class="action" href="${esc(tel.url)}">${icon('phone', 18)}Gọi</a>` : ''}
+                    ${zalo ? `<a class="action" href="${esc(zalo.url)}" target="_blank" rel="noopener"><span aria-hidden="true">${icon('zalo', 40)}</span><span class="sr-only">Zalo</span></a>` : ''}
+                    <button class="action primary" type="button" id="save-contact">${icon('userPlus', 18)}Lưu danh bạ</button>
+                </nav>
+
+                <nav class="pages reveal" aria-label="Hồ sơ">
+                    <a class="page-link" href="cv.html">${tile('file')}<span><b>CV</b><small>Hồ sơ năng lực</small></span></a>
+                    <a class="page-link" href="portfolio.html">${tile('grid')}<span><b>Portfolio</b><small>Dự án đã làm</small></span></a>
+                </nav>
+
+                <section class="reveal">
+                    <div class="tabs" role="tablist" data-active="contacts">
+                        <span class="tab-indicator" aria-hidden="true"></span>
+                        <button class="tab" role="tab" id="t-contacts" aria-controls="p-contacts" aria-selected="true" data-tab="contacts">Liên hệ</button>
+                        <button class="tab" role="tab" id="t-payments" aria-controls="p-payments" aria-selected="false" data-tab="payments" tabindex="-1">Thanh toán</button>
+                    </div>
+
+                    <div class="panel" id="p-contacts" role="tabpanel" aria-labelledby="t-contacts">
+                        <ul class="list">
+                            ${contacts.map(c => row({ icon: c.icon, title: c.label, sub: c.value, href: c.url })).join('')}
+                        </ul>
+                    </div>
+
+                    <div class="panel" id="p-payments" role="tabpanel" aria-labelledby="t-payments" hidden>
+                        <ul class="list">
+                            ${payments.map((p, i) => p.qr
+                                ? row({ icon: p.icon || 'bank', title: p.name, sub: p.account, attrs: `data-pay="${i}"` })
+                                : row({ icon: p.icon || 'wallet', title: p.name, sub: p.value, href: p.url })).join('')}
+                        </ul>
+                    </div>
+                </section>
+
+                <footer class="reveal">
+                    <button class="share" type="button" id="share">${icon('share', 17)}Chia sẻ danh thiếp</button>
+                    <span>© ${new Date().getFullYear()} ${esc(profile.name)}</span>
+                </footer>
+            `;
+
+            $('save-contact').addEventListener('click', () => saveContact(data));
+            $('share').addEventListener('click', async () => {
+                const url = location.origin + location.pathname;
+                if (navigator.share) {
+                    try { await navigator.share({ title: profile.name, text: 'Danh thiếp của ' + profile.name, url }); } catch {}
+                } else copy(url);
+            });
+
+            const tablist = app.querySelector('.tabs');
+            const tabs = [...tablist.querySelectorAll('.tab')];
+            function select(tab) {
+                tabs.forEach(t => {
+                    const on = t === tab;
+                    t.setAttribute('aria-selected', on);
+                    t.tabIndex = on ? 0 : -1;
+                    $(t.getAttribute('aria-controls')).hidden = !on;
+                });
+                tablist.dataset.active = tab.dataset.tab;
+            }
+            tabs.forEach(t => t.addEventListener('click', () => select(t)));
+            tablist.addEventListener('keydown', e => {
+                if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+                const next = tabs[(tabs.indexOf(document.activeElement) + 1) % tabs.length];
+                select(next); next.focus();
+            });
+
+            app.querySelectorAll('[data-pay]').forEach(b =>
+                b.addEventListener('click', () => openQR(payments[b.dataset.pay])));
+        }
+
+        render();
     </script>
 </body>
 </html>

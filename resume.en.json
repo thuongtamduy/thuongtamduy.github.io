@@ -1,0 +1,568 @@
+{
+  "name": "Trần Tiến Đạt",
+  "title": "Tech Lead · Backend",
+  "avatar": "avatar.jpg",
+  "since": 2020,
+  "summary": "Backend tech lead, currently Head of IT. I focus on multi-platform e-commerce and multi-tenant SaaS: I analyse what a business needs to design the right system, build infrastructure that holds up under load, automate deployment, and bring AI into both the product and the way the team works.",
+  "contact": [
+    {
+      "label": "Phone",
+      "value": "0968 046 804",
+      "url": "tel:0968046804",
+      "icon": "phone"
+    },
+    {
+      "label": "Email",
+      "value": "trantiendat.98.work@gmail.com",
+      "url": "mailto:trantiendat.98.work@gmail.com",
+      "icon": "mail"
+    },
+    {
+      "label": "Website",
+      "value": "thuongtamduy.com",
+      "url": "https://thuongtamduy.com",
+      "icon": "globe"
+    },
+    {
+      "label": "GitHub",
+      "value": "github.com/thuongtamduy",
+      "url": "https://github.com/thuongtamduy",
+      "icon": "github"
+    }
+  ],
+  "capabilities": [
+    {
+      "icon": "cart",
+      "title": "Multi-platform e-commerce",
+      "text": "Sales systems that run on one core across the website, apps and other sales channels."
+    },
+    {
+      "icon": "layers",
+      "title": "Multi-tenancy and SaaS",
+      "text": "Architectures where many customers share one platform, with data and configuration isolated per customer."
+    },
+    {
+      "icon": "server",
+      "title": "High-load infrastructure and DevOps",
+      "text": "Load-tolerant designs on Kubernetes, K3s, Docker Swarm, Google Cloud and AWS, with CI/CD that deploys automatically."
+    },
+    {
+      "icon": "compass",
+      "title": "Business analysis",
+      "text": "Working directly with the business to turn needs into system design, and streamlining operations for teammates."
+    },
+    {
+      "icon": "sparkles",
+      "title": "AI and data",
+      "text": "Bring large language models into products and workflows, build AI agents that reach tools through MCP, and ship BI dashboards on Apache Superset."
+    }
+  ],
+  "skills": [
+    {
+      "group": "Languages",
+      "items": [
+        "PHP",
+        "TypeScript",
+        "Go"
+      ],
+      "key": "languages"
+    },
+    {
+      "group": "Runtimes",
+      "items": [
+        "PHP",
+        "Node.js",
+        "Deno",
+        "Bun",
+        "Go"
+      ],
+      "key": "runtimes"
+    },
+    {
+      "group": "Frameworks and CMS",
+      "items": [
+        "Laravel",
+        "NestJS",
+        "Next.js",
+        "Hono",
+        "Fresh",
+        "OpenCart",
+        "WordPress"
+      ],
+      "key": "frameworks"
+    },
+    {
+      "group": "Databases",
+      "items": [
+        "MySQL",
+        "PostgreSQL",
+        "SQL Server",
+        "MongoDB"
+      ],
+      "key": "databases"
+    },
+    {
+      "group": "ERP",
+      "items": [
+        "ERPNext",
+        "Odoo"
+      ],
+      "key": "erp"
+    },
+    {
+      "group": "DevOps and Cloud",
+      "items": [
+        "Google Cloud",
+        "AWS",
+        "Cloudflare",
+        "Kubernetes",
+        "K3s",
+        "Docker",
+        "Docker Swarm",
+        "VPS"
+      ],
+      "key": "devops"
+    },
+    {
+      "group": "CI/CD",
+      "items": [
+        "GitHub Actions",
+        "GitLab CI",
+        "Jenkins",
+        "Auto deploy"
+      ],
+      "key": "cicd"
+    },
+    {
+      "group": "Cache and queues",
+      "items": [
+        "Redis",
+        "RabbitMQ",
+        "BullMQ"
+      ],
+      "key": "cache"
+    },
+    {
+      "group": "Monitoring",
+      "items": [
+        "Prometheus",
+        "Grafana",
+        "Uptime Kuma"
+      ],
+      "key": "monitoring"
+    },
+    {
+      "group": "Web servers and gateways",
+      "items": [
+        "Nginx",
+        "Traefik",
+        "Caddy"
+      ],
+      "key": "web"
+    },
+    {
+      "group": "AI",
+      "items": [
+        "Claude",
+        "Gemini",
+        "DeepSeek",
+        "Grok",
+        "MiniMax",
+        "MCP",
+        "AI agents",
+        "Prompt engineering"
+      ],
+      "key": "ai"
+    },
+    {
+      "group": "Data and BI",
+      "items": [
+        "Apache Superset"
+      ],
+      "key": "bi"
+    },
+    {
+      "group": "Tools",
+      "items": [
+        "VS Code",
+        "Google Antigravity",
+        "Claude Code",
+        "Git",
+        "Warp",
+        "Postman",
+        "DBeaver"
+      ],
+      "key": "tools"
+    },
+    {
+      "group": "Project management and collaboration",
+      "items": [
+        "Jira",
+        "Notion",
+        "Lark",
+        "draw.io"
+      ],
+      "key": "pm"
+    },
+    {
+      "group": "Operating systems",
+      "items": [
+        "macOS",
+        "Linux / Ubuntu",
+        "Windows"
+      ],
+      "key": "os"
+    }
+  ],
+  "experience": [
+    {
+      "from": "2025",
+      "to": "present",
+      "company": "Acorneri Holdings JSC",
+      "group": "Dai Thuan Group",
+      "taxId": "4201665844",
+      "url": "https://acorneri.com",
+      "role": "Head of IT",
+      "highlights": [
+        "Run the IT department, planning and prioritising technology projects for the group's companies.",
+        "Analyse departmental workflows to choose the right approach: build, integrate, or adopt an existing solution.",
+        "Own cloud infrastructure, security, backups and operating costs.",
+        "Bring AI tools into the department's development and operations workflow."
+      ],
+      "current": true
+    },
+    {
+      "from": "2023",
+      "to": "2025",
+      "company": "Toplink JSC",
+      "group": "",
+      "taxId": "0317335862",
+      "url": "",
+      "role": "Tech Lead",
+      "highlights": [
+        "Designed a multi-platform e-commerce system with one shared backend core for the website, apps and sales channels.",
+        "Built a multi-tenant architecture for a SaaS product, isolating data and configuration per customer.",
+        "Set up container infrastructure on Kubernetes, K3s and Docker Swarm, with CI/CD that deploys on merge.",
+        "Reviewed code, mentored team members, and built tooling so the team could deploy and monitor on their own."
+      ],
+      "current": false
+    },
+    {
+      "from": "2020",
+      "to": "2023",
+      "company": "Tien Phong CDS JSC",
+      "group": "Digital transformation for businesses",
+      "taxId": "0316459939",
+      "url": "https://tienphongcds.com",
+      "role": "Tech Lead",
+      "highlights": [
+        "Led the backend team building websites and e-commerce systems for enterprise clients on Laravel, WordPress and OpenCart.",
+        "Worked with clients to analyse requirements, propose architecture and estimate scope for each project.",
+        "Standardised how the team works: Git workflow, code review, and separate dev, staging and production environments.",
+        "Set up and ran VPS servers, and automated deployments for client projects."
+      ],
+      "current": false
+    }
+  ],
+  "projects": [
+    {
+      "name": "Novadreams",
+      "domain": "novadreams.com.vn",
+      "url": "https://novadreams.com.vn",
+      "image": "assets/projects/novadreams.jpg",
+      "industry": "Travel and entertainment",
+      "client": "Nova Service",
+      "summary": "An e-ticketing platform for Nova Service's theme parks at NovaWorld Ho Tram. Twenty modules cover everything from a guest booking a ticket to customer care, revenue reports and notifications, with data pushed to SAP. After launch, the system grew to cover shuttle bus routes.",
+      "tech": [
+        "PHP Lumen",
+        "Next.js",
+        "MySQL",
+        "Docker",
+        "Kubernetes",
+        "CMC Cloud"
+      ],
+      "featured": true,
+      "role": ""
+    },
+    {
+      "name": "King Coffee",
+      "domain": "kingcoffee.com",
+      "url": "https://kingcoffee.com",
+      "image": "assets/projects/kingcoffee.jpg",
+      "industry": "Coffee",
+      "client": "King Coffee",
+      "summary": "One online store shared by four countries. Payment and delivery plug straight into each order. It runs on AWS across several availability zones, so a single failure cannot take the whole system down.",
+      "tech": [
+        "AWS ECS Fargate",
+        "Aurora MySQL",
+        "CloudFront",
+        "CodePipeline",
+        "CloudWatch"
+      ],
+      "featured": true,
+      "role": ""
+    },
+    {
+      "name": "Mutosi",
+      "domain": "mutosi.com",
+      "url": "https://mutosi.com",
+      "image": "assets/projects/mutosi.jpg",
+      "industry": "Home appliances and water purifiers",
+      "client": "Mutosi Group",
+      "summary": "Orders from 4 marketplaces flow into one processing point, then go out through 2 carriers and 3 payment gateways. Beyond sales, the system also tracks IoT-connected water purifiers.",
+      "tech": [
+        "PHP Lumen",
+        "Kubernetes",
+        "CMC Cloud",
+        "SAP S/4HANA",
+        "Jenkins"
+      ],
+      "featured": true,
+      "role": ""
+    },
+    {
+      "name": "NutifoodShop",
+      "domain": "nutifood.com.vn",
+      "url": "https://nutifood.com.vn",
+      "image": "assets/projects/nutifood.jpg",
+      "industry": "Nutrition and dairy",
+      "client": "Nutifood",
+      "summary": "Distributors, retail outlets and end consumers all order on the same marketplace. An affiliate channel adds a revenue stream next to direct sales.",
+      "tech": [
+        "PHP Lumen",
+        "Google Cloud GKE",
+        "NuxtJS",
+        "Flutter",
+        "Docker"
+      ],
+      "featured": true,
+      "role": ""
+    },
+    {
+      "name": "ePro",
+      "domain": "giathanh.vn",
+      "url": "https://www.giathanh.vn",
+      "image": "assets/projects/giathanh.jpg",
+      "industry": "Electronics e-commerce",
+      "client": "Gia Thanh",
+      "summary": "Every unit sold is tracked by serial number, from goods-in to order to warranty claim. The system exchanges data with Aqua through an API and moves daily sales coordination onto the ERP.",
+      "tech": [
+        "PHP Lumen",
+        "MySQL",
+        "NuxtJS",
+        "VMware ESXi"
+      ],
+      "featured": true,
+      "role": ""
+    },
+    {
+      "name": "eSmiles",
+      "domain": "esmiles.vn",
+      "url": "",
+      "image": "assets/projects/esmiles.jpg",
+      "industry": "Dental clinic chain",
+      "taxId": "0315509665",
+      "client": "eSmiles JSC",
+      "summary": "Software for the eSmiles dental clinic chain.",
+      "tech": [
+        "PostgreSQL",
+        "Prisma",
+        "Python"
+      ],
+      "featured": true,
+      "role": ""
+    },
+    {
+      "name": "Gemadept",
+      "domain": "gemadept.com.vn",
+      "url": "https://www.gemadept.com.vn",
+      "image": "assets/projects/gemadept.jpg",
+      "industry": "Ports and logistics"
+    },
+    {
+      "name": "Smac",
+      "domain": "smac.vn",
+      "url": "https://smac.vn",
+      "image": "assets/projects/smac.jpg",
+      "industry": "Omnichannel digital transformation platform"
+    },
+    {
+      "name": "Dai Thuan",
+      "domain": "daithuan.vn",
+      "url": "https://daithuan.vn",
+      "image": "assets/projects/daithuan.jpg",
+      "industry": "Food group"
+    },
+    {
+      "name": "Dai Thuan Food",
+      "domain": "daithuanfood.vn",
+      "url": "https://daithuanfood.vn",
+      "image": "assets/projects/daithuanfood.jpg",
+      "industry": "Frozen foods"
+    },
+    {
+      "name": "Dai Long Cable",
+      "domain": "dailongcable.com",
+      "url": "https://dailongcable.com",
+      "image": "assets/projects/dailong.jpg",
+      "industry": "Electrical wire and cable manufacturing"
+    }
+  ],
+  "products": [
+    {
+      "name": "XForce",
+      "kind": "SaaS platform",
+      "visual": "tenants",
+      "tagline": "The platform that commercialises Denolith",
+      "text": "XForce packages Denolith as a product to sell. Its platform admin (ops) grants modules to each tenant. Every tenant is its own Denolith with its own database. It runs on Deno and Hono, queries with Kysely, and has no node_modules: Deno manages every dependency directly.",
+      "tags": [
+        "Deno",
+        "Hono",
+        "Kysely",
+        "No node_modules",
+        "Multi-tenant",
+        "Database per tenant"
+      ]
+    },
+    {
+      "name": "Denolith",
+      "kind": "Backend framework",
+      "visual": "stack",
+      "tagline": "A backend framework built on Deno and Hono",
+      "text": "Organises an application into modules like NestJS, but leaner and tailored to how I work. Uses Prisma as the ORM and Zod to validate input. The foundation of XForce.",
+      "tags": [
+        "Deno",
+        "Hono",
+        "Prisma",
+        "TypeScript",
+        "Zod"
+      ]
+    },
+    {
+      "name": "Minikit",
+      "url": "https://minikit.pages.dev/",
+      "image": "assets/projects/minikit.jpg",
+      "tagline": "Small tools that run right in the browser",
+      "text": "31 everyday tools: 2FA codes, document scanning, merging and signing PDFs, audio trimming, GIFs from video, JSON, Markdown, Regex, image compression and QR codes. Nothing to install, and data never leaves the user's device.",
+      "tags": [
+        "Personal product",
+        "Runs fully in the browser",
+        "Cloudflare Pages"
+      ],
+      "kind": "Web tools"
+    }
+  ],
+  "principle": "I like systems where adding a sales channel or a new customer is a config change, not a rewrite.",
+  "process": [
+    {
+      "step": "Analyse",
+      "text": "Study how the business really works, then lock scope and acceptance criteria before the first line of code.",
+      "outputs": [
+        "Requirements",
+        "Business flows"
+      ],
+      "job": "analyse"
+    },
+    {
+      "step": "Design",
+      "text": "Choose the architecture, the data model and how to split tenants or channels, with an estimate both sides can look at.",
+      "outputs": [
+        "Architecture",
+        "Data model",
+        "Estimate"
+      ],
+      "job": "design"
+    },
+    {
+      "step": "Build",
+      "text": "Split modules across the team, review code, and run CI checks on every push so bugs are caught early.",
+      "outputs": [
+        "Source code",
+        "CI pipeline",
+        "Staging"
+      ],
+      "job": "build"
+    },
+    {
+      "step": "Operate",
+      "text": "Automated deploys, monitoring, backups and cost tracking, so nobody has to stay up watching the system.",
+      "outputs": [
+        "Production",
+        "Monitoring",
+        "Docs"
+      ],
+      "job": "operate"
+    }
+  ],
+  "education": [
+    {
+      "school": "Cao Thang Technical College",
+      "degree": "",
+      "from": "",
+      "to": ""
+    }
+  ],
+  "spoken": [
+    {
+      "name": "Vietnamese",
+      "level": "Native"
+    },
+    {
+      "name": "English",
+      "level": "Intermediate: reading technical documentation and written work communication"
+    }
+  ],
+  "layers": [
+    {
+      "id": "ai",
+      "name": "AI and data",
+      "groups": [
+        "ai",
+        "bi"
+      ]
+    },
+    {
+      "id": "app",
+      "name": "Application",
+      "groups": [
+        "languages",
+        "runtimes",
+        "frameworks"
+      ]
+    },
+    {
+      "id": "data",
+      "name": "Storage and business systems",
+      "groups": [
+        "databases",
+        "cache",
+        "erp"
+      ]
+    },
+    {
+      "id": "ship",
+      "name": "Delivery",
+      "groups": [
+        "cicd",
+        "web"
+      ]
+    },
+    {
+      "id": "infra",
+      "name": "Infrastructure and monitoring",
+      "groups": [
+        "devops",
+        "monitoring"
+      ]
+    },
+    {
+      "id": "team",
+      "name": "How the team works",
+      "groups": [
+        "pm",
+        "tools",
+        "os"
+      ]
+    }
+  ]
+}

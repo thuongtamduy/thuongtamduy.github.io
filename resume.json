@@ -1,0 +1,568 @@
+{
+  "name": "Trần Tiến Đạt",
+  "title": "Tech Lead · Backend",
+  "avatar": "avatar.jpg",
+  "since": 2020,
+  "summary": "Tech Lead backend, hiện là Trưởng phòng IT. Tôi tập trung vào hệ thống thương mại điện tử đa nền tảng và SaaS multi-tenant: phân tích nhu cầu doanh nghiệp để thiết kế hệ thống phù hợp, dựng hạ tầng chịu tải, tự động hoá việc triển khai, và đưa AI vào cả sản phẩm lẫn cách đội làm việc.",
+  "contact": [
+    {
+      "label": "Điện thoại",
+      "value": "0968 046 804",
+      "url": "tel:0968046804",
+      "icon": "phone"
+    },
+    {
+      "label": "Email",
+      "value": "trantiendat.98.work@gmail.com",
+      "url": "mailto:trantiendat.98.work@gmail.com",
+      "icon": "mail"
+    },
+    {
+      "label": "Website",
+      "value": "thuongtamduy.com",
+      "url": "https://thuongtamduy.com",
+      "icon": "globe"
+    },
+    {
+      "label": "GitHub",
+      "value": "github.com/thuongtamduy",
+      "url": "https://github.com/thuongtamduy",
+      "icon": "github"
+    }
+  ],
+  "capabilities": [
+    {
+      "icon": "cart",
+      "title": "Thương mại điện tử đa nền tảng",
+      "text": "Xây hệ thống bán hàng chạy chung một lõi cho website, ứng dụng và các kênh bán khác."
+    },
+    {
+      "icon": "layers",
+      "title": "Multi-tenancy và SaaS",
+      "text": "Thiết kế kiến trúc nhiều khách hàng dùng chung một nền tảng, tách biệt dữ liệu và cấu hình cho từng bên."
+    },
+    {
+      "icon": "server",
+      "title": "Hạ tầng chịu tải và DevOps",
+      "text": "Thiết kế mô hình chịu tải trên Kubernetes, K3s, Docker Swarm, Google Cloud và AWS. Dựng CI/CD tự động deploy."
+    },
+    {
+      "icon": "compass",
+      "title": "Phân tích nghiệp vụ",
+      "text": "Làm việc trực tiếp với doanh nghiệp để chuyển nhu cầu thành thiết kế hệ thống, và tối ưu quy trình vận hành cho đồng đội."
+    },
+    {
+      "icon": "sparkles",
+      "title": "AI và dữ liệu",
+      "text": "Đưa mô hình ngôn ngữ lớn vào sản phẩm và quy trình, dựng AI agent nối với công cụ qua MCP, và làm dashboard BI trên Apache Superset."
+    }
+  ],
+  "skills": [
+    {
+      "group": "Ngôn ngữ",
+      "items": [
+        "PHP",
+        "TypeScript",
+        "Go"
+      ],
+      "key": "languages"
+    },
+    {
+      "group": "Runtime",
+      "items": [
+        "PHP",
+        "Node.js",
+        "Deno",
+        "Bun",
+        "Go"
+      ],
+      "key": "runtimes"
+    },
+    {
+      "group": "Framework và CMS",
+      "items": [
+        "Laravel",
+        "NestJS",
+        "Next.js",
+        "Hono",
+        "Fresh",
+        "OpenCart",
+        "WordPress"
+      ],
+      "key": "frameworks"
+    },
+    {
+      "group": "Cơ sở dữ liệu",
+      "items": [
+        "MySQL",
+        "PostgreSQL",
+        "SQL Server",
+        "MongoDB"
+      ],
+      "key": "databases"
+    },
+    {
+      "group": "ERP",
+      "items": [
+        "ERPNext",
+        "Odoo"
+      ],
+      "key": "erp"
+    },
+    {
+      "group": "DevOps và Cloud",
+      "items": [
+        "Google Cloud",
+        "AWS",
+        "Cloudflare",
+        "Kubernetes",
+        "K3s",
+        "Docker",
+        "Docker Swarm",
+        "VPS"
+      ],
+      "key": "devops"
+    },
+    {
+      "group": "CI/CD",
+      "items": [
+        "GitHub Actions",
+        "GitLab CI",
+        "Jenkins",
+        "Auto deploy"
+      ],
+      "key": "cicd"
+    },
+    {
+      "group": "Cache và hàng đợi",
+      "items": [
+        "Redis",
+        "RabbitMQ",
+        "BullMQ"
+      ],
+      "key": "cache"
+    },
+    {
+      "group": "Giám sát",
+      "items": [
+        "Prometheus",
+        "Grafana",
+        "Uptime Kuma"
+      ],
+      "key": "monitoring"
+    },
+    {
+      "group": "Web server và gateway",
+      "items": [
+        "Nginx",
+        "Traefik",
+        "Caddy"
+      ],
+      "key": "web"
+    },
+    {
+      "group": "AI",
+      "items": [
+        "Claude",
+        "Gemini",
+        "DeepSeek",
+        "Grok",
+        "MiniMax",
+        "MCP",
+        "AI agents",
+        "Prompt engineering"
+      ],
+      "key": "ai"
+    },
+    {
+      "group": "Dữ liệu và BI",
+      "items": [
+        "Apache Superset"
+      ],
+      "key": "bi"
+    },
+    {
+      "group": "Công cụ",
+      "items": [
+        "VS Code",
+        "Google Antigravity",
+        "Claude Code",
+        "Git",
+        "Warp",
+        "Postman",
+        "DBeaver"
+      ],
+      "key": "tools"
+    },
+    {
+      "group": "Quản lý dự án và cộng tác",
+      "items": [
+        "Jira",
+        "Notion",
+        "Lark",
+        "draw.io"
+      ],
+      "key": "pm"
+    },
+    {
+      "group": "Hệ điều hành",
+      "items": [
+        "macOS",
+        "Linux / Ubuntu",
+        "Windows"
+      ],
+      "key": "os"
+    }
+  ],
+  "experience": [
+    {
+      "from": "2025",
+      "to": "nay",
+      "company": "Công ty Cổ phần Acorneri Holdings",
+      "group": "Đại Thuận Group",
+      "taxId": "4201665844",
+      "url": "https://acorneri.com",
+      "role": "Trưởng phòng IT",
+      "highlights": [
+        "Quản lý phòng IT, lập kế hoạch và sắp thứ tự ưu tiên các dự án công nghệ cho các công ty trong tập đoàn.",
+        "Phân tích quy trình của các phòng ban để chọn hướng giải quyết phù hợp: xây mới, tích hợp hay dùng giải pháp có sẵn.",
+        "Phụ trách hạ tầng cloud, bảo mật, sao lưu và chi phí vận hành của hệ thống.",
+        "Đưa công cụ AI vào quy trình phát triển và vận hành của phòng."
+      ],
+      "current": true
+    },
+    {
+      "from": "2023",
+      "to": "2025",
+      "company": "Công ty Cổ phần Toplink",
+      "group": "",
+      "taxId": "0317335862",
+      "url": "",
+      "role": "Tech Lead",
+      "highlights": [
+        "Thiết kế hệ thống thương mại điện tử đa nền tảng, dùng chung một lõi backend cho website, ứng dụng và các kênh bán.",
+        "Xây kiến trúc multi-tenant cho sản phẩm SaaS, tách dữ liệu và cấu hình theo từng khách hàng.",
+        "Dựng hạ tầng container trên Kubernetes, K3s và Docker Swarm, kèm CI/CD tự deploy khi merge code.",
+        "Review code, hướng dẫn thành viên, và làm công cụ để đội tự deploy, tự theo dõi hệ thống."
+      ],
+      "current": false
+    },
+    {
+      "from": "2020",
+      "to": "2023",
+      "company": "Công ty Cổ phần Tiên Phong CDS",
+      "group": "Chuyển đổi số cho doanh nghiệp",
+      "taxId": "0316459939",
+      "url": "https://tienphongcds.com",
+      "role": "Tech Lead",
+      "highlights": [
+        "Dẫn dắt đội backend làm website và hệ thống thương mại điện tử cho khách hàng doanh nghiệp trên Laravel, WordPress và OpenCart.",
+        "Làm việc với khách hàng để phân tích yêu cầu, đề xuất kiến trúc và ước lượng phạm vi từng dự án.",
+        "Chuẩn hoá cách làm việc của đội: quy trình Git, review code, tách môi trường dev, staging và production.",
+        "Dựng và vận hành máy chủ VPS, tự động hoá việc triển khai các dự án khách hàng."
+      ],
+      "current": false
+    }
+  ],
+  "projects": [
+    {
+      "name": "Novadreams",
+      "domain": "novadreams.com.vn",
+      "url": "https://novadreams.com.vn",
+      "image": "assets/projects/novadreams.jpg",
+      "industry": "Du lịch và vui chơi giải trí",
+      "client": "Nova Service",
+      "summary": "Nền tảng vé điện tử cho các khu vui chơi của Nova Service tại NovaWorld Hồ Tràm. 20 module lo trọn từ lúc khách đặt vé, chăm sóc khách hàng, báo cáo doanh thu cho tới gửi thông báo, và đẩy dữ liệu sang SAP. Sau khi vận hành, hệ thống được mở rộng thêm các tuyến xe đưa đón.",
+      "tech": [
+        "PHP Lumen",
+        "Next.js",
+        "MySQL",
+        "Docker",
+        "Kubernetes",
+        "CMC Cloud"
+      ],
+      "featured": true,
+      "role": ""
+    },
+    {
+      "name": "King Coffee",
+      "domain": "kingcoffee.com",
+      "url": "https://kingcoffee.com",
+      "image": "assets/projects/kingcoffee.jpg",
+      "industry": "Cà phê",
+      "client": "King Coffee",
+      "summary": "Một hệ thống bán hàng trực tuyến dùng chung cho bốn quốc gia. Thanh toán và giao vận nối thẳng vào đơn hàng. Hạ tầng đặt trên AWS, trải trên nhiều vùng sẵn sàng để một điểm hỏng không kéo sập cả hệ thống.",
+      "tech": [
+        "AWS ECS Fargate",
+        "Aurora MySQL",
+        "CloudFront",
+        "CodePipeline",
+        "CloudWatch"
+      ],
+      "featured": true,
+      "role": ""
+    },
+    {
+      "name": "Mutosi",
+      "domain": "mutosi.com",
+      "url": "https://mutosi.com",
+      "image": "assets/projects/mutosi.jpg",
+      "industry": "Thiết bị gia dụng, máy lọc nước",
+      "client": "Mutosi Group",
+      "summary": "Đơn từ 4 sàn thương mại điện tử đổ về cùng một chỗ xử lý, rồi đi ra qua 2 hãng vận chuyển và 3 cổng thanh toán. Ngoài chuyện bán hàng, hệ thống còn theo dõi các máy lọc nước có kết nối IoT.",
+      "tech": [
+        "PHP Lumen",
+        "Kubernetes",
+        "CMC Cloud",
+        "SAP S/4HANA",
+        "Jenkins"
+      ],
+      "featured": true,
+      "role": ""
+    },
+    {
+      "name": "NutifoodShop",
+      "domain": "nutifood.com.vn",
+      "url": "https://nutifood.com.vn",
+      "image": "assets/projects/nutifood.jpg",
+      "industry": "Dinh dưỡng và sữa",
+      "client": "Nutifood",
+      "summary": "Nhà phân phối, điểm bán lẻ và người tiêu dùng cuối đặt hàng trên cùng một sàn. Kênh tiếp thị liên kết (affiliate) mở thêm một nguồn doanh thu bên cạnh kênh bán trực tiếp.",
+      "tech": [
+        "PHP Lumen",
+        "Google Cloud GKE",
+        "NuxtJS",
+        "Flutter",
+        "Docker"
+      ],
+      "featured": true,
+      "role": ""
+    },
+    {
+      "name": "ePro",
+      "domain": "giathanh.vn",
+      "url": "https://www.giathanh.vn",
+      "image": "assets/projects/giathanh.jpg",
+      "industry": "Thương mại điện tử điện máy",
+      "client": "Gia Thành",
+      "summary": "Mỗi chiếc máy bán ra được theo dõi bằng số serial, từ lúc nhập kho, lên đơn cho tới khi bảo hành. Hệ thống trao đổi dữ liệu với hãng Aqua qua API và đưa việc điều phối bán hàng hằng ngày lên ERP.",
+      "tech": [
+        "PHP Lumen",
+        "MySQL",
+        "NuxtJS",
+        "VMware ESXi"
+      ],
+      "featured": true,
+      "role": ""
+    },
+    {
+      "name": "eSmiles",
+      "domain": "esmiles.vn",
+      "url": "",
+      "image": "assets/projects/esmiles.jpg",
+      "industry": "Chuỗi nha khoa",
+      "taxId": "0315509665",
+      "client": "Công ty Cổ phần eSmiles",
+      "summary": "Hệ thống phần mềm cho chuỗi nha khoa eSmiles.",
+      "tech": [
+        "PostgreSQL",
+        "Prisma",
+        "Python"
+      ],
+      "featured": true,
+      "role": ""
+    },
+    {
+      "name": "Gemadept",
+      "domain": "gemadept.com.vn",
+      "url": "https://www.gemadept.com.vn",
+      "image": "assets/projects/gemadept.jpg",
+      "industry": "Cảng biển và logistics"
+    },
+    {
+      "name": "Smac",
+      "domain": "smac.vn",
+      "url": "https://smac.vn",
+      "image": "assets/projects/smac.jpg",
+      "industry": "Nền tảng chuyển đổi số đa kênh"
+    },
+    {
+      "name": "Đại Thuận",
+      "domain": "daithuan.vn",
+      "url": "https://daithuan.vn",
+      "image": "assets/projects/daithuan.jpg",
+      "industry": "Tập đoàn thực phẩm"
+    },
+    {
+      "name": "Đại Thuận Food",
+      "domain": "daithuanfood.vn",
+      "url": "https://daithuanfood.vn",
+      "image": "assets/projects/daithuanfood.jpg",
+      "industry": "Thực phẩm đông lạnh"
+    },
+    {
+      "name": "Đại Long Cable",
+      "domain": "dailongcable.com",
+      "url": "https://dailongcable.com",
+      "image": "assets/projects/dailong.jpg",
+      "industry": "Sản xuất dây và cáp điện"
+    }
+  ],
+  "products": [
+    {
+      "name": "XForce",
+      "kind": "Nền tảng SaaS",
+      "visual": "tenants",
+      "tagline": "Nền tảng thương mại hoá Denolith",
+      "text": "XForce đóng gói Denolith thành sản phẩm để bán. Phần Quản trị nền tảng (ops) cấp module cho từng tenant. Mỗi tenant là một Denolith riêng, chạy trên cơ sở dữ liệu riêng. Chạy trên Deno và Hono, truy vấn bằng Kysely, không dùng node_modules: mọi thư viện do Deno quản lý trực tiếp.",
+      "tags": [
+        "Deno",
+        "Hono",
+        "Kysely",
+        "Không node_modules",
+        "Multi-tenant",
+        "Database per tenant"
+      ]
+    },
+    {
+      "name": "Denolith",
+      "kind": "Backend framework",
+      "visual": "stack",
+      "tagline": "Framework backend tự xây trên Deno và Hono",
+      "text": "Tổ chức ứng dụng theo module giống NestJS, nhưng gọn hơn và may đo theo cách tôi làm việc. Dùng Prisma làm ORM, Zod để kiểm tra dữ liệu vào. Là nền móng của XForce.",
+      "tags": [
+        "Deno",
+        "Hono",
+        "Prisma",
+        "TypeScript",
+        "Zod"
+      ]
+    },
+    {
+      "name": "Minikit",
+      "url": "https://minikit.pages.dev/",
+      "image": "assets/projects/minikit.jpg",
+      "tagline": "Công cụ nhỏ chạy ngay trên trình duyệt",
+      "text": "31 công cụ dùng hằng ngày: lấy mã 2FA, scan tài liệu, gộp và ký PDF, cắt ghép âm thanh, làm GIF từ video, xử lý JSON, Markdown, Regex, nén ảnh, tạo mã QR. Không cần cài đặt, dữ liệu không rời khỏi máy người dùng.",
+      "tags": [
+        "Sản phẩm cá nhân",
+        "Chạy hoàn toàn trên trình duyệt",
+        "Cloudflare Pages"
+      ],
+      "kind": "Công cụ web"
+    }
+  ],
+  "principle": "Tôi thích những hệ thống mà thêm một kênh bán hay một khách hàng mới chỉ là thêm cấu hình, không phải viết lại.",
+  "process": [
+    {
+      "step": "Phân tích",
+      "text": "Khảo sát quy trình thật của doanh nghiệp, chốt phạm vi và tiêu chí nghiệm thu trước khi viết dòng code đầu tiên.",
+      "outputs": [
+        "Tài liệu yêu cầu",
+        "Luồng nghiệp vụ"
+      ],
+      "job": "analyse"
+    },
+    {
+      "step": "Thiết kế",
+      "text": "Chọn kiến trúc, mô hình dữ liệu và cách tách tenant hay tách kênh, kèm ước lượng để cả hai bên cùng nhìn một con số.",
+      "outputs": [
+        "Sơ đồ kiến trúc",
+        "Thiết kế CSDL",
+        "Ước lượng"
+      ],
+      "job": "design"
+    },
+    {
+      "step": "Xây dựng",
+      "text": "Chia module cho từng người, review code, CI chạy kiểm tra trên mỗi lần push để lỗi bị chặn sớm.",
+      "outputs": [
+        "Mã nguồn",
+        "Pipeline CI",
+        "Staging"
+      ],
+      "job": "build"
+    },
+    {
+      "step": "Vận hành",
+      "text": "Deploy tự động, giám sát, sao lưu và theo dõi chi phí, để đội không phải thức đêm canh hệ thống.",
+      "outputs": [
+        "Production",
+        "Giám sát",
+        "Tài liệu"
+      ],
+      "job": "operate"
+    }
+  ],
+  "education": [
+    {
+      "school": "Cao đẳng Kỹ thuật Cao Thắng",
+      "degree": "",
+      "from": "",
+      "to": ""
+    }
+  ],
+  "spoken": [
+    {
+      "name": "Tiếng Việt",
+      "level": "Bản ngữ"
+    },
+    {
+      "name": "Tiếng Anh",
+      "level": "Trung cấp: đọc tài liệu kỹ thuật và trao đổi công việc qua văn bản"
+    }
+  ],
+  "layers": [
+    {
+      "id": "ai",
+      "name": "AI và dữ liệu",
+      "groups": [
+        "ai",
+        "bi"
+      ]
+    },
+    {
+      "id": "app",
+      "name": "Ứng dụng",
+      "groups": [
+        "languages",
+        "runtimes",
+        "frameworks"
+      ]
+    },
+    {
+      "id": "data",
+      "name": "Lưu trữ và nghiệp vụ",
+      "groups": [
+        "databases",
+        "cache",
+        "erp"
+      ]
+    },
+    {
+      "id": "ship",
+      "name": "Phát hành",
+      "groups": [
+        "cicd",
+        "web"
+      ]
+    },
+    {
+      "id": "infra",
+      "name": "Hạ tầng và giám sát",
+      "groups": [
+        "devops",
+        "monitoring"
+      ]
+    },
+    {
+      "id": "team",
+      "name": "Cách đội làm việc",
+      "groups": [
+        "pm",
+        "tools",
+        "os"
+      ]
+    }
+  ]
+}
