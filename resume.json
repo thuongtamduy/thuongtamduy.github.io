@@ -436,7 +436,6 @@
   "products": [
     {
       "name": "Autoxide",
-      "url": "https://github.com/thuongtamduy/autoxide",
       "kind": "Backend core mã nguồn mở",
       "visual": "tenants",
       "tagline": "Lõi backend Rust cho sản phẩm mới, dùng được cho cả người lẫn AI agent",

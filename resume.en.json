@@ -436,7 +436,6 @@
   "products": [
     {
       "name": "Autoxide",
-      "url": "https://github.com/thuongtamduy/autoxide",
       "kind": "Open-source backend core",
       "visual": "tenants",
       "tagline": "A Rust backend core for new products, built for people and AI agents alike",
