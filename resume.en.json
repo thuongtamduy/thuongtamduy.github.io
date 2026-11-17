@@ -81,6 +81,7 @@
         "Node.js",
         "Deno",
         "Bun",
+        "Tokio",
         "Go"
       ],
       "key": "runtimes"
@@ -102,7 +103,6 @@
       "group": "Rust ecosystem",
       "items": [
         "Cargo",
-        "Tokio",
         "Axum",
         "SeaORM",
         "Serde",
