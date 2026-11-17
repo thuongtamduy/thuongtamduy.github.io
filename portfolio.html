@@ -325,18 +325,18 @@
         /* Diagrams for products without a screenshot */
         const VISUALS = {
             tenants: () => `
-                <div class="node ops">${icon('sliders', 20)}<div><b>XForce Ops</b><small>${t('pf.dia.ops')}</small></div></div>
+                <div class="node ops">${icon('sliders', 20)}<div><b>Autoxide core</b><small>${t('pf.dia.ops')}</small></div></div>
                 <div class="tenants">
-                    ${[['Tenant A', ['orders', 'inventory']], ['Tenant B', ['orders', 'crm']], ['Tenant C', ['inventory', 'crm', 'hr']]].map(([name, mods], i) => `
+                    ${[['Tenant A', ['content', 'media'], 'SQLite'], ['Tenant B', ['catalog', 'orders'], 'Postgres'], ['Tenant C', ['orders', 'inventory', 'bookings'], 'Postgres']].map(([name, mods, db]) => `
                         <div class="node tenant">
                             <b>${name}</b>
-                            <span class="runtime">Denolith</span>
+                            <span class="runtime">REST · MCP</span>
                             <div class="mods">${mods.map(m => `<span>${m}</span>`).join('')}</div>
-                            <div class="dbx">${icon('db', 14)}db_${'abc'[i]}</div>
+                            <div class="dbx">${icon('db', 14)}${db}</div>
                         </div>`).join('')}
                 </div>
                 <p class="dia-note">${t('pf.dia.note')}</p>
-                <div class="stackline">${['Deno', 'Hono', 'Kysely'].map(x => `<span>${x}</span>`).join('<i>+</i>')}<span class="no">node_modules</span></div>`,
+                <div class="stackline">${['Rust', 'Tokio', 'Axum', 'SeaORM'].map(x => `<span>${x}</span>`).join('<i>+</i>')}<span class="no">unsafe</span></div>`,
             stack: () => `
                 <div class="layers">
                     <div class="node layer app">${t('pf.dia.app')}<small>${t('pf.dia.appSmall')}</small></div>
@@ -356,6 +356,7 @@
                     <h3>${esc(p.name)}</h3>
                     <p><strong>${esc(p.tagline)}.</strong> ${esc(p.text)}</p>
                     ${chips(p.tags)}
+                    ${p.url ? `<a class="visit" href="${esc(p.url)}"${ext(p.url)}>${esc(p.url.replace(/^https?:\/\/|\/$/g, ''))} ${icon('arrow', 15)}</a>` : ''}
                 </div>
             </article>`;
 

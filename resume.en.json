@@ -3,7 +3,7 @@
   "title": "Tech Lead · Backend",
   "avatar": "avatar.jpg",
   "since": 2020,
-  "summary": "Backend tech lead, currently Head of IT. I focus on multi-platform e-commerce and multi-tenant SaaS: I analyse what a business needs to design the right system, build infrastructure that holds up under load, automate deployment, and bring AI into both the product and the way the team works.",
+  "summary": "Backend tech lead, currently Head of IT. I focus on multi-platform e-commerce and multi-tenant SaaS: I analyse what a business needs to design the right system, build infrastructure that holds up under load, automate deployment, and bring AI into both the product and the way the team works. Most recently I built Autoxide, an open-source backend core in Rust, by vibe coding with AI agents.",
   "contact": [
     {
       "label": "Phone",
@@ -59,16 +59,18 @@
     {
       "icon": "sparkles",
       "title": "AI and data",
-      "text": "Bring large language models into products and workflows, build AI agents that reach tools through MCP, and ship BI dashboards on Apache Superset."
+      "text": "Bring large language models into products and workflows, build AI agents that reach tools through MCP, ship BI dashboards on Apache Superset, and vibe code across languages (Rust, TypeScript, PHP, Go, Python) with tests and a quality gate keeping the bar."
     }
   ],
   "skills": [
     {
       "group": "Languages",
       "items": [
+        "Rust",
         "PHP",
         "TypeScript",
-        "Go"
+        "Go",
+        "Python"
       ],
       "key": "languages"
     },
@@ -97,10 +99,27 @@
       "key": "frameworks"
     },
     {
+      "group": "Rust ecosystem",
+      "items": [
+        "Cargo",
+        "Tokio",
+        "Axum",
+        "SeaORM",
+        "Serde",
+        "utoipa (OpenAPI)",
+        "rmcp (MCP)",
+        "tracing",
+        "OpenTelemetry",
+        "Clippy"
+      ],
+      "key": "rust"
+    },
+    {
       "group": "Databases",
       "items": [
         "MySQL",
         "PostgreSQL",
+        "SQLite",
         "SQL Server",
         "MongoDB"
       ],
@@ -174,6 +193,7 @@
         "Grok",
         "MiniMax",
         "MCP",
+        "Multi-language vibe coding",
         "AI agents",
         "Prompt engineering"
       ],
@@ -415,18 +435,22 @@
   ],
   "products": [
     {
-      "name": "XForce",
-      "kind": "SaaS platform",
+      "name": "Autoxide",
+      "url": "https://github.com/thuongtamduy/autoxide",
+      "kind": "Open-source backend core",
       "visual": "tenants",
-      "tagline": "The platform that commercialises Denolith",
-      "text": "XForce packages Denolith as a product to sell. Its platform admin (ops) grants modules to each tenant. Every tenant is its own Denolith with its own database. It runs on Deno and Hono, queries with Kysely, and has no node_modules: Deno manages every dependency directly.",
+      "tagline": "A Rust backend core for new products, built for people and AI agents alike",
+      "text": "The core comes first; business modules plug in on top. One code base runs on both SQLite and PostgreSQL, with a REST API described by OpenAPI and an MCP endpoint so AI agents can call the system as tools. Multi-tenant by configuration: each customer turns on its own modules, from websites and content to e-commerce. I set the direction and AI agents write the code; every change must pass a gate that runs the tests on both databases. The admin and storefront are built with Next.js in a separate repository.",
       "tags": [
-        "Deno",
-        "Hono",
-        "Kysely",
-        "No node_modules",
+        "Rust",
+        "Axum",
+        "SeaORM",
+        "SQLite + PostgreSQL",
+        "OpenAPI",
+        "MCP",
         "Multi-tenant",
-        "Database per tenant"
+        "Open source",
+        "Vibe coding"
       ]
     },
     {
@@ -434,7 +458,7 @@
       "kind": "Backend framework",
       "visual": "stack",
       "tagline": "A backend framework built on Deno and Hono",
-      "text": "Organises an application into modules like NestJS, but leaner and tailored to how I work. Uses Prisma as the ORM and Zod to validate input. The foundation of XForce.",
+      "text": "Organises an application into modules like NestJS, but leaner and tailored to how I work. Uses Prisma as the ORM and Zod to validate input.",
       "tags": [
         "Deno",
         "Hono",
@@ -532,7 +556,8 @@
       "groups": [
         "languages",
         "runtimes",
-        "frameworks"
+        "frameworks",
+        "rust"
       ]
     },
     {

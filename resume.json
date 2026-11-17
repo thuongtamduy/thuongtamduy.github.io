@@ -3,7 +3,7 @@
   "title": "Tech Lead · Backend",
   "avatar": "avatar.jpg",
   "since": 2020,
-  "summary": "Tech Lead backend, hiện là Trưởng phòng IT. Tôi tập trung vào hệ thống thương mại điện tử đa nền tảng và SaaS multi-tenant: phân tích nhu cầu doanh nghiệp để thiết kế hệ thống phù hợp, dựng hạ tầng chịu tải, tự động hoá việc triển khai, và đưa AI vào cả sản phẩm lẫn cách đội làm việc.",
+  "summary": "Tech Lead backend, hiện là Trưởng phòng IT. Tôi tập trung vào hệ thống thương mại điện tử đa nền tảng và SaaS multi-tenant: phân tích nhu cầu doanh nghiệp để thiết kế hệ thống phù hợp, dựng hạ tầng chịu tải, tự động hoá việc triển khai, và đưa AI vào cả sản phẩm lẫn cách đội làm việc. Gần đây tôi dựng Autoxide, một lõi backend mã nguồn mở bằng Rust, theo cách vibe coding cùng AI agent.",
   "contact": [
     {
       "label": "Điện thoại",
@@ -59,16 +59,18 @@
     {
       "icon": "sparkles",
       "title": "AI và dữ liệu",
-      "text": "Đưa mô hình ngôn ngữ lớn vào sản phẩm và quy trình, dựng AI agent nối với công cụ qua MCP, và làm dashboard BI trên Apache Superset."
+      "text": "Đưa mô hình ngôn ngữ lớn vào sản phẩm và quy trình, dựng AI agent nối với công cụ qua MCP, làm dashboard BI trên Apache Superset, và vibe coding đa ngôn ngữ (Rust, TypeScript, PHP, Go, Python) với test và gate giữ chất lượng."
     }
   ],
   "skills": [
     {
       "group": "Ngôn ngữ",
       "items": [
+        "Rust",
         "PHP",
         "TypeScript",
-        "Go"
+        "Go",
+        "Python"
       ],
       "key": "languages"
     },
@@ -97,10 +99,27 @@
       "key": "frameworks"
     },
     {
+      "group": "Hệ sinh thái Rust",
+      "items": [
+        "Cargo",
+        "Tokio",
+        "Axum",
+        "SeaORM",
+        "Serde",
+        "utoipa (OpenAPI)",
+        "rmcp (MCP)",
+        "tracing",
+        "OpenTelemetry",
+        "Clippy"
+      ],
+      "key": "rust"
+    },
+    {
       "group": "Cơ sở dữ liệu",
       "items": [
         "MySQL",
         "PostgreSQL",
+        "SQLite",
         "SQL Server",
         "MongoDB"
       ],
@@ -174,6 +193,7 @@
         "Grok",
         "MiniMax",
         "MCP",
+        "Vibe Coding đa ngôn ngữ",
         "AI agents",
         "Prompt engineering"
       ],
@@ -415,18 +435,22 @@
   ],
   "products": [
     {
-      "name": "XForce",
-      "kind": "Nền tảng SaaS",
+      "name": "Autoxide",
+      "url": "https://github.com/thuongtamduy/autoxide",
+      "kind": "Backend core mã nguồn mở",
       "visual": "tenants",
-      "tagline": "Nền tảng thương mại hoá Denolith",
-      "text": "XForce đóng gói Denolith thành sản phẩm để bán. Phần Quản trị nền tảng (ops) cấp module cho từng tenant. Mỗi tenant là một Denolith riêng, chạy trên cơ sở dữ liệu riêng. Chạy trên Deno và Hono, truy vấn bằng Kysely, không dùng node_modules: mọi thư viện do Deno quản lý trực tiếp.",
+      "tagline": "Lõi backend Rust cho sản phẩm mới, dùng được cho cả người lẫn AI agent",
+      "text": "Dựng core trước, module nghiệp vụ cắm vào sau. Một bộ code chạy trên cả SQLite và PostgreSQL, có REST API mô tả bằng OpenAPI và MCP endpoint để AI agent gọi hệ thống như công cụ. Đa khách theo cấu hình: mỗi khách bật module riêng, từ website, nội dung tới thương mại điện tử. Tôi định hướng, AI agent viết code; mọi thay đổi phải qua gate chạy test trên cả hai cơ sở dữ liệu. Giao diện quản trị và website bán hàng làm bằng Next.js ở repo riêng.",
       "tags": [
-        "Deno",
-        "Hono",
-        "Kysely",
-        "Không node_modules",
+        "Rust",
+        "Axum",
+        "SeaORM",
+        "SQLite + PostgreSQL",
+        "OpenAPI",
+        "MCP",
         "Multi-tenant",
-        "Database per tenant"
+        "Mã nguồn mở",
+        "Vibe coding"
       ]
     },
     {
@@ -434,7 +458,7 @@
       "kind": "Backend framework",
       "visual": "stack",
       "tagline": "Framework backend tự xây trên Deno và Hono",
-      "text": "Tổ chức ứng dụng theo module giống NestJS, nhưng gọn hơn và may đo theo cách tôi làm việc. Dùng Prisma làm ORM, Zod để kiểm tra dữ liệu vào. Là nền móng của XForce.",
+      "text": "Tổ chức ứng dụng theo module giống NestJS, nhưng gọn hơn và may đo theo cách tôi làm việc. Dùng Prisma làm ORM, Zod để kiểm tra dữ liệu vào.",
       "tags": [
         "Deno",
         "Hono",
@@ -532,7 +556,8 @@
       "groups": [
         "languages",
         "runtimes",
-        "frameworks"
+        "frameworks",
+        "rust"
       ]
     },
     {
