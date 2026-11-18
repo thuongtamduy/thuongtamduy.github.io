@@ -28,6 +28,8 @@ const I18N = {
         'pf.client': 'Khách hàng', 'pf.role': 'Vai trò', 'pf.homeAlt': n => `Trang chủ ${n}`, 'pf.open': d => `Mở ${d}`,
         'pf.others': 'Các dự án khác', 'pf.th.project': 'Dự án', 'pf.th.industry': 'Lĩnh vực', 'pf.th.site': 'Website',
         'pf.proc.eyebrow': 'Cách làm việc', 'pf.proc.h2': 'Dự án chạy như một pipeline', 'pf.proc.p': 'Mỗi dự án đi qua bốn job. Job nào chưa xanh thì job sau chưa chạy.', 'pf.outputs': 'Bàn giao', 'pf.passed': 'đạt',
+        'pf.ai.eyebrow': 'Làm việc với AI', 'pf.ai.h2': 'AI viết code, tôi giữ hướng đi', 'pf.ai.p': 'AI viết phần lớn code, còn tôi giữ ba thứ: hướng đi, tiêu chuẩn và quyết định cuối cùng. Đầu vào và đầu ra đều được kiểm soát, và việc cần con người thì tôi tự làm.',
+        'pf.ai.example': 'Áp dụng ở', 'pf.ai.human': 'Phần tôi tự làm', 'pf.ai.flow': 'Quy trình làm việc với AI agent',
         'pf.journey.eyebrow': 'Hành trình', 'pf.journey.h2': 'Nơi tôi đã làm việc',
         'pf.stack.eyebrow': 'Nền tảng kỹ thuật', 'pf.stack.h2': 'Làm việc ở mọi tầng của hệ thống', 'pf.stack.p': 'Từ hạ tầng ở dưới cùng tới AI ở trên cùng. Số bên phải là số công cụ tôi dùng ở mỗi tầng.', 'pf.count': n => `${n} công cụ`,
         'pf.edu.eyebrow': 'Nền tảng', 'pf.edu.h2': 'Học vấn và ngôn ngữ',
@@ -54,6 +56,8 @@ const I18N = {
         'pf.client': 'Client', 'pf.role': 'Role', 'pf.homeAlt': n => `${n} home page`, 'pf.open': d => `Open ${d}`,
         'pf.others': 'Other projects', 'pf.th.project': 'Project', 'pf.th.industry': 'Industry', 'pf.th.site': 'Website',
         'pf.proc.eyebrow': 'How I work', 'pf.proc.h2': 'Every project runs like a pipeline', 'pf.proc.p': 'Each project goes through four jobs. A job does not start until the one before it is green.', 'pf.outputs': 'Ships', 'pf.passed': 'passed',
+        'pf.ai.eyebrow': 'Working with AI', 'pf.ai.h2': 'AI writes the code, I own the direction', 'pf.ai.p': 'AI writes most of the code; I own the direction, the standards and the final call. Inputs and outputs are both controlled, and the work that needs a person I do myself.',
+        'pf.ai.example': 'Applied in', 'pf.ai.human': 'What I do myself', 'pf.ai.flow': 'How I work with AI agents',
         'pf.journey.eyebrow': 'Journey', 'pf.journey.h2': 'Where I have worked',
         'pf.stack.eyebrow': 'Technical foundation', 'pf.stack.h2': 'Working across every layer of the system', 'pf.stack.p': 'From infrastructure at the bottom to AI at the top. The number on the right is how many tools I use on each layer.', 'pf.count': n => `${n} tools`,
         'pf.edu.eyebrow': 'Background', 'pf.edu.h2': 'Education and languages',
@@ -95,6 +99,7 @@ const ICONS = {
     db: '<ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/>',
     users: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
     sparkles: '<path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.14-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0L14.06 8.5A2 2 0 0 0 15.5 9.94l6.14 1.58a.5.5 0 0 1 0 .96L15.5 14.06a2 2 0 0 0-1.44 1.44l-1.58 6.14a.5.5 0 0 1-.96 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/>',
+    user: '<path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
     sliders: '<path d="M4 21v-7"/><path d="M4 10V3"/><path d="M12 21v-9"/><path d="M12 8V3"/><path d="M20 21v-5"/><path d="M20 12V3"/><path d="M2 14h4"/><path d="M10 8h4"/><path d="M18 16h4"/>'
 };
 const GITHUB = 'M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12';

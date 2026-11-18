@@ -522,6 +522,41 @@
       "job": "operate"
     }
   ],
+  "ai": {
+    "example": {
+      "name": "Autoxide",
+      "files": [
+        "CLAUDE.md",
+        "docs/ROADMAP.md",
+        "docs/DECISIONS.md",
+        "gate.sh"
+      ]
+    },
+    "flow": [
+      {
+        "job": "input",
+        "step": "Đầu vào",
+        "text": "Luật, lộ trình và nhật ký quyết định viết thành văn bản, để agent biết phải làm gì mà không cần đoán."
+      },
+      {
+        "job": "agent",
+        "step": "AI agent viết code",
+        "text": "Làm từng bước theo lộ trình. Code mới phải có test đi kèm."
+      },
+      {
+        "job": "gate",
+        "step": "Gate",
+        "text": "Test, lint và kiểm hợp đồng API chạy tự động. Gate xanh mới tính là xong; gate đỏ thì sửa code, không nới gate."
+      }
+    ],
+    "human": [
+      "Hiểu nghiệp vụ và nói chuyện với người dùng",
+      "Quyết định làm gì, bỏ gì",
+      "Đọc test và dùng thử như người dùng thật",
+      "Bảo mật, secret, dữ liệu thật và deploy",
+      "Pháp lý: thuế, dữ liệu cá nhân"
+    ]
+  },
   "education": [
     {
       "school": "Cao đẳng Kỹ thuật Cao Thắng",

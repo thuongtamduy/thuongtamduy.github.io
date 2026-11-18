@@ -522,6 +522,41 @@
       "job": "operate"
     }
   ],
+  "ai": {
+    "example": {
+      "name": "Autoxide",
+      "files": [
+        "CLAUDE.md",
+        "docs/ROADMAP.md",
+        "docs/DECISIONS.md",
+        "gate.sh"
+      ]
+    },
+    "flow": [
+      {
+        "job": "input",
+        "step": "Input",
+        "text": "Rules, a roadmap and a decision log written down, so agents know what to do without guessing."
+      },
+      {
+        "job": "agent",
+        "step": "AI agents write the code",
+        "text": "One roadmap step at a time. New code always comes with tests."
+      },
+      {
+        "job": "gate",
+        "step": "Gate",
+        "text": "Tests, lint and API contract checks run automatically. Only a green gate counts as done; a red gate means fixing the code, never loosening the gate."
+      }
+    ],
+    "human": [
+      "Understanding the business and talking to users",
+      "Deciding what to build and what to drop",
+      "Reading the tests and using the product like a real user",
+      "Security, secrets, real data and deployment",
+      "Legal matters: tax and personal data"
+    ]
+  },
   "education": [
     {
       "school": "Cao Thang Technical College",

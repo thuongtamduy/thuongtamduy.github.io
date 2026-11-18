@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/site.css?v=2026-11-17">
+    <link rel="stylesheet" href="assets/site.css?v=2026-11-18">
     <link rel="alternate" hreflang="vi" href="https://thuongtamduy.com/portfolio.html">
     <link rel="alternate" hreflang="en" href="https://thuongtamduy.com/portfolio.html?lang=en">
 
@@ -158,12 +158,13 @@
 
         .others { margin-top: 72px; }
         .others h3 { margin: 0 0 12px; font-size: 18px; }
-        .tr { display: grid; grid-template-columns: 1fr 1.3fr auto; gap: 16px; align-items: center; padding: 14px 20px; text-decoration: none; }
+        .tr { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr) 11rem; gap: 16px; align-items: center; padding: 14px 20px; text-decoration: none; }
         .tr + .tr { border-top: 1px solid var(--border); }
         .tr.th { padding-block: 10px; font-family: var(--mono); font-size: 11.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; background-color: var(--surface-2); }
         .tr b { font-weight: 600; }
         .tr span { color: var(--muted); font-size: 14px; }
-        .tr .dom { font-family: var(--mono); font-size: 12px; }
+        .tr .dom { font-family: var(--mono); font-size: 12px; text-align: right; }
+        .tr.th span:last-child { text-align: right; }
         a.tr:hover { background-color: var(--surface-2); }
         a.tr:hover b { color: var(--accent); }
 
@@ -189,6 +190,31 @@
         .ships ul { margin: 6px 0 0; padding: 0; list-style: none; }
         .ships li::before { content: '→ '; color: var(--accent); }
 
+        /* ---------- Working with AI: inputs -> agent -> gate, plus the part kept by a person ---------- */
+        .ai { padding: 0; overflow: hidden; }
+        .ai-head { display: flex; flex-wrap: wrap; gap: 8px 10px; align-items: center; padding: 14px 24px; border-bottom: 1px solid var(--border); font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+        .ai-head b { color: var(--text); font-weight: 600; margin-right: 4px; }
+        .ai-head code { padding: 2px 8px; border-radius: 4px; border: 1px solid var(--border); background: var(--surface-2); font-size: 11.5px; }
+        .ai-body { display: grid; grid-template-columns: 1.5fr 1fr; }
+        .ai-flow { list-style: none; margin: 0; padding: 26px 24px; display: flex; flex-direction: column; gap: 22px; }
+        .ai-step { position: relative; display: grid; grid-template-columns: 32px 1fr; gap: 14px; }
+        .ai-step > i {
+            position: relative; z-index: 1;
+            width: 32px; height: 32px; border-radius: 50%;
+            display: grid; place-items: center;
+            font-style: normal; font-family: var(--mono); font-size: 12px; font-weight: 600;
+            color: var(--accent); background-color: var(--surface); border: 1.5px solid var(--accent);
+        }
+        .ai-step:not(:last-child)::after { content: ''; position: absolute; left: 15.25px; top: 32px; bottom: -22px; width: 1.5px; background: var(--accent); opacity: .4; }
+        .ai-step.gate > i { color: var(--accent-ink); background-color: var(--accent); }
+        .ai-step code { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+        .ai-step h3 { margin: 2px 0 4px; font-size: 16.5px; }
+        .ai-step p { margin: 0; color: var(--muted); font-size: 14px; max-width: 520px; }
+        .ai-human { padding: 26px 24px; border-left: 1px solid var(--border); background-color: var(--surface-2); }
+        .ai-human h3 { margin: 0; font-family: var(--mono); font-size: 12px; font-weight: 500; color: var(--accent); text-transform: uppercase; letter-spacing: .06em; }
+        .ai-human ul { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+        .ai-human li { display: flex; gap: 10px; font-size: 14.5px; }
+        .ai-human li svg { margin-top: 3px; color: var(--accent); }
         /* ---------- Journey ---------- */
         .journey { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; list-style: none; margin: 0; padding: 0; }
         .step { padding: 22px 22px 24px; }
@@ -234,6 +260,8 @@
             .work:nth-child(even) .shot { order: 0; }
             .jobs { grid-template-columns: 1fr 1fr; row-gap: 28px; }
             .job:nth-child(2)::after { display: none; }
+            .ai-body { grid-template-columns: 1fr; }
+            .ai-human { border-left: 0; border-top: 1px solid var(--border); }
         }
         @media (max-width: 600px) {
             .block { padding-top: 64px; }
@@ -249,6 +277,7 @@
             .tr.th { display: none; }
             .work-text h3 { font-size: 23px; }
             .feature-text { padding: 24px 20px; }
+            .ai-head, .ai-flow, .ai-human { padding-left: 18px; padding-right: 18px; }
             .contact { padding: 36px 20px; }
             .tenants { gap: 8px; }
             .tenant { padding: 10px 6px; }
@@ -276,7 +305,7 @@
 
     <footer class="site-foot" id="foot"></footer>
 
-    <script src="assets/site.js?v=2026-11-17"></script>
+    <script src="assets/site.js?v=2026-11-18"></script>
     <script>
         setupPage('portfolio');
 
@@ -477,6 +506,26 @@
                     </div>
                 </section>` : ''}
 
+                ${r.ai ? `
+                <section class="block" id="ai">
+                    ${sec(++n, 'pf.ai')}
+                    <div class="panel ticks ai">
+                        ${r.ai.example ? `<div class="ai-head"><span>${t('pf.ai.example')}</span><b>${esc(r.ai.example.name)}</b>${r.ai.example.files.map(f => `<code>${esc(f)}</code>`).join('')}</div>` : ''}
+                        <div class="ai-body">
+                            <ol class="ai-flow" aria-label="${esc(t('pf.ai.flow'))}">
+                                ${r.ai.flow.map((s, i) => `
+                                    <li class="ai-step${s.job === 'gate' ? ' gate' : ''}">
+                                        <i>${s.job === 'gate' ? check : pad(i + 1)}</i>
+                                        <div><code>${esc(s.job)}</code><h3>${esc(s.step)}</h3><p>${esc(s.text)}</p></div>
+                                    </li>`).join('')}
+                            </ol>
+                            <div class="ai-human">
+                                <h3>${t('pf.ai.human')}</h3>
+                                <ul>${r.ai.human.map(h => `<li>${icon('user', 16)}<span>${esc(h)}</span></li>`).join('')}</ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>` : ''}
                 <section class="block">
                     ${sec(++n, 'pf.journey', false)}
                     <ol class="journey">
