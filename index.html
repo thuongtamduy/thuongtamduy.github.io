@@ -44,7 +44,7 @@
                 --border: rgba(15, 23, 42, 0.08);
                 --text: #0f172a;
                 --muted: #5b6577;
-                --accent: #0284c7;
+                --accent: #0068b8;
                 --accent-ink: #ffffff;
                 --shadow: 0 1px 2px rgba(15, 23, 42, 0.05), 0 8px 24px rgba(15, 23, 42, 0.06);
             }
@@ -318,11 +318,10 @@
 
     <dialog id="qr-dialog" aria-labelledby="qr-title">
         <div class="dlg-head">
-            <h2 id="qr-title"></h2>
+            <h2 id="qr-title">Mã QR</h2>
             <button class="icon-btn" type="button" data-close aria-label="Đóng"></button>
         </div>
         <div class="dlg-body">
-            <img class="qr" id="qr-img" alt="">
             <div class="acct">
                 <div>
                     <small>Số tài khoản</small>
@@ -331,7 +330,7 @@
                 <button class="btn" type="button" id="qr-copy"></button>
             </div>
             <div class="dlg-foot">
-                <a class="btn ghost" id="qr-open" target="_blank" rel="noopener"></a>
+                <a class="btn ghost" id="qr-open"></a>
             </div>
         </div>
     </dialog>
@@ -433,9 +432,11 @@
         dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
         function openQR(p) {
             $('qr-title').textContent = p.name;
+            // The image and the link target are made on first open, so the page never holds an <img> without src or an <a> without href
+            if (!$('qr-img')) dlg.querySelector('.dlg-body').prepend(Object.assign(document.createElement('img'), { className: 'qr', id: 'qr-img' }));
             Object.assign($('qr-img'), { src: p.qr, alt: 'Mã QR chuyển khoản ' + p.name });
             $('qr-acct').textContent = p.account;
-            $('qr-open').href = p.qr;
+            Object.assign($('qr-open'), { href: p.qr, target: '_blank', rel: 'noopener' });
             dlg.showModal();
         }
 
@@ -475,8 +476,8 @@
                 <section class="reveal">
                     <div class="tabs" role="tablist" data-active="contacts">
                         <span class="tab-indicator" aria-hidden="true"></span>
-                        <button class="tab" role="tab" id="t-contacts" aria-controls="p-contacts" aria-selected="true" data-tab="contacts">Liên hệ</button>
-                        <button class="tab" role="tab" id="t-payments" aria-controls="p-payments" aria-selected="false" data-tab="payments" tabindex="-1">Thanh toán</button>
+                        <button class="tab" type="button" role="tab" id="t-contacts" aria-controls="p-contacts" aria-selected="true" data-tab="contacts">Liên hệ</button>
+                        <button class="tab" type="button" role="tab" id="t-payments" aria-controls="p-payments" aria-selected="false" data-tab="payments" tabindex="-1">Thanh toán</button>
                     </div>
 
                     <div class="panel" id="p-contacts" role="tabpanel" aria-labelledby="t-contacts">

@@ -13,12 +13,11 @@ const I18N = {
         'title.cv': 'CV · Trần Tiến Đạt', 'title.portfolio': 'Portfolio · Trần Tiến Đạt',
         'cv.toolbar': 'Bản CV mới nhất, luôn cập nhật tại thuongtamduy.com/cv.html', 'cv.viewPortfolio': 'Xem portfolio', 'cv.print': 'Tải PDF',
         'cv.about': 'Giới thiệu', 'cv.experience': 'Kinh nghiệm', 'cv.capabilities': 'Năng lực chính', 'cv.skills': 'Kỹ năng',
-        'cv.education': 'Học vấn', 'cv.spoken': 'Ngoại ngữ', 'cv.projects': 'Dự án tiêu biểu', 'cv.others': 'Các dự án khác', 'cv.products': 'Sản phẩm tự xây',
+        'cv.education': 'Học vấn', 'cv.spoken': 'Ngoại ngữ', 'cv.projects': 'Dự án tiêu biểu', 'cv.others': 'Các dự án khác', 'cv.products': 'Sản phẩm tự xây', 'cv.ai': 'Làm việc với AI',
         'pf.tag': 'Backend cho thương mại điện tử và nền tảng SaaS', 'pf.viewProjects': 'Xem dự án', 'pf.pdf': 'Tải CV (PDF)',
         'pf.fig': 'Hình 01. Một lõi backend, nhiều kênh bán, mỗi khách hàng một database',
         'pf.figAria': 'Sơ đồ: các kênh bán đi vào một lõi backend, lõi tách dữ liệu ra database riêng của từng khách hàng',
         'pf.ch.web': 'Website', 'pf.ch.app': 'Ứng dụng', 'pf.ch.market': 'Sàn TMĐT', 'pf.ch.erp': 'ERP', 'pf.core.sub': 'một codebase', 'pf.tenants': 'mỗi khách một database',
-        'pf.spec': 'Thông số',
         'pf.stat.years': 'năm làm backend', 'pf.stat.companies': 'doanh nghiệp đã gắn bó', 'pf.stat.projects': 'dự án doanh nghiệp', 'pf.stat.products': 'sản phẩm tự xây',
         'pf.caps.eyebrow': 'Tôi làm gì', 'pf.caps.h2': 'Năng lực chính', 'pf.caps.p': 'Từ phân tích nghiệp vụ đến khi hệ thống chạy ổn định trên production.',
         'pf.prod.eyebrow': 'Sản phẩm của tôi', 'pf.prod.h2': 'Tự xây, tự vận hành', 'pf.try': 'Dùng thử', 'pf.shotAlt': n => `Giao diện ${n}`,
@@ -29,7 +28,7 @@ const I18N = {
         'pf.others': 'Các dự án khác', 'pf.th.project': 'Dự án', 'pf.th.industry': 'Lĩnh vực', 'pf.th.site': 'Website',
         'pf.proc.eyebrow': 'Cách làm việc', 'pf.proc.h2': 'Dự án chạy như một pipeline', 'pf.proc.p': 'Mỗi dự án đi qua bốn job. Job nào chưa xanh thì job sau chưa chạy.', 'pf.outputs': 'Bàn giao', 'pf.passed': 'đạt',
         'pf.ai.eyebrow': 'Làm việc với AI', 'pf.ai.h2': 'AI viết code, tôi giữ hướng đi', 'pf.ai.p': 'AI viết phần lớn code, còn tôi giữ ba thứ: hướng đi, tiêu chuẩn và quyết định cuối cùng. Đầu vào và đầu ra đều được kiểm soát, và việc cần con người thì tôi tự làm.',
-        'pf.ai.example': 'Áp dụng ở', 'pf.ai.human': 'Phần tôi tự làm', 'pf.ai.flow': 'Quy trình làm việc với AI agent',
+        'pf.ai.example': 'Áp dụng ở', 'pf.ai.human': 'Phần tôi tự làm',
         'pf.journey.eyebrow': 'Hành trình', 'pf.journey.h2': 'Nơi tôi đã làm việc',
         'pf.stack.eyebrow': 'Nền tảng kỹ thuật', 'pf.stack.h2': 'Làm việc ở mọi tầng của hệ thống', 'pf.stack.p': 'Từ hạ tầng ở dưới cùng tới AI ở trên cùng. Số bên phải là số công cụ tôi dùng ở mỗi tầng.', 'pf.count': n => `${n} công cụ`,
         'pf.edu.eyebrow': 'Nền tảng', 'pf.edu.h2': 'Học vấn và ngôn ngữ',
@@ -41,12 +40,11 @@ const I18N = {
         'title.cv': 'CV · Tran Tien Dat', 'title.portfolio': 'Portfolio · Tran Tien Dat',
         'cv.toolbar': 'Latest version, always up to date at thuongtamduy.com/cv.html?lang=en', 'cv.viewPortfolio': 'View portfolio', 'cv.print': 'Download PDF',
         'cv.about': 'Profile', 'cv.experience': 'Experience', 'cv.capabilities': 'Core strengths', 'cv.skills': 'Skills',
-        'cv.education': 'Education', 'cv.spoken': 'Languages', 'cv.projects': 'Selected projects', 'cv.others': 'Other projects', 'cv.products': 'Own products',
+        'cv.education': 'Education', 'cv.spoken': 'Languages', 'cv.projects': 'Selected projects', 'cv.others': 'Other projects', 'cv.products': 'Own products', 'cv.ai': 'Working with AI',
         'pf.tag': 'Backend for e\u2011commerce and SaaS platforms', 'pf.viewProjects': 'See projects', 'pf.pdf': 'Download CV (PDF)',
         'pf.fig': 'Figure 01. One backend core, many sales channels, one database per customer',
         'pf.figAria': 'Diagram: sales channels flow into one backend core, which keeps each customer\'s data in its own database',
         'pf.ch.web': 'Website', 'pf.ch.app': 'App', 'pf.ch.market': 'Marketplaces', 'pf.ch.erp': 'ERP', 'pf.core.sub': 'one codebase', 'pf.tenants': 'one database per customer',
-        'pf.spec': 'Spec sheet',
         'pf.stat.years': 'years in backend', 'pf.stat.companies': 'companies', 'pf.stat.projects': 'business projects', 'pf.stat.products': 'products I built',
         'pf.caps.eyebrow': 'What I do', 'pf.caps.h2': 'Core strengths', 'pf.caps.p': 'From business analysis to a system that runs steadily in production.',
         'pf.prod.eyebrow': 'My products', 'pf.prod.h2': 'Built and run by me', 'pf.try': 'Try', 'pf.shotAlt': n => `Screenshot of ${n}`,
@@ -57,7 +55,7 @@ const I18N = {
         'pf.others': 'Other projects', 'pf.th.project': 'Project', 'pf.th.industry': 'Industry', 'pf.th.site': 'Website',
         'pf.proc.eyebrow': 'How I work', 'pf.proc.h2': 'Every project runs like a pipeline', 'pf.proc.p': 'Each project goes through four jobs. A job does not start until the one before it is green.', 'pf.outputs': 'Ships', 'pf.passed': 'passed',
         'pf.ai.eyebrow': 'Working with AI', 'pf.ai.h2': 'AI writes the code, I own the direction', 'pf.ai.p': 'AI writes most of the code; I own the direction, the standards and the final call. Inputs and outputs are both controlled, and the work that needs a person I do myself.',
-        'pf.ai.example': 'Applied in', 'pf.ai.human': 'What I do myself', 'pf.ai.flow': 'How I work with AI agents',
+        'pf.ai.example': 'Applied in', 'pf.ai.human': 'What I do myself',
         'pf.journey.eyebrow': 'Journey', 'pf.journey.h2': 'Where I have worked',
         'pf.stack.eyebrow': 'Technical foundation', 'pf.stack.h2': 'Working across every layer of the system', 'pf.stack.p': 'From infrastructure at the bottom to AI at the top. The number on the right is how many tools I use on each layer.', 'pf.count': n => `${n} tools`,
         'pf.edu.eyebrow': 'Background', 'pf.edu.h2': 'Education and languages',
@@ -110,6 +108,9 @@ function icon(name, size = 18) {
     }
     return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name] || ICONS.arrow}</svg>`;
 }
+
+/* Link text for a contact; phone numbers keep their spaces from breaking the line */
+const linkText = c => /^tel:/.test(c.url) ? esc(c.value).replace(/ /g, '&nbsp;') : esc(c.value);
 
 const ext = url => /^https?:/.test(url) ? ' target="_blank" rel="noopener"' : '';
 const years = since => new Date().getFullYear() - since;

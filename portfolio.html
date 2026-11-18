@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/site.css?v=2026-11-18">
+    <link rel="stylesheet" href="assets/site.css?v=2026-11-18b">
     <link rel="alternate" hreflang="vi" href="https://thuongtamduy.com/portfolio.html">
     <link rel="alternate" hreflang="en" href="https://thuongtamduy.com/portfolio.html?lang=en">
 
@@ -94,8 +94,9 @@
         /* ---------- Products ---------- */
         .labs { display: grid; grid-template-columns: 1.35fr 1fr; gap: 16px; margin-bottom: 16px; }
         .lab { display: flex; flex-direction: column; overflow: hidden; }
-        .lab-visual { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 26px 22px; border-bottom: 1px solid var(--border); }
-        .lab-text { padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 10px; }
+        .lab-visual { display: flex; flex-direction: column; justify-content: center; padding: 26px 22px; border-bottom: 1px solid var(--border); }
+        .lab-text { flex: 1; padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 10px; }
+        .lab-text .chips { margin-top: auto; }
         .kind { font-family: var(--mono); font-size: 12px; color: var(--accent); text-transform: uppercase; letter-spacing: .06em; }
         .lab-text h3, .feature-text h3 { margin: 0; font-family: var(--mono); font-size: 26px; font-weight: 700; letter-spacing: -0.03em; }
         .lab-text p, .feature-text p { margin: 0; color: var(--muted); }
@@ -128,7 +129,7 @@
         .layer small { font-family: var(--mono); font-size: 11px; font-weight: 400; color: var(--muted); text-align: right; }
         .layer.app { border-style: dashed; background-color: transparent; color: var(--muted); }
         .layer.core { color: var(--accent-ink); background-color: var(--accent); border-color: var(--accent); }
-        .layer.core small { color: inherit; opacity: .8; }
+        .layer.core small { color: inherit; }
         .layer-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0 10px; }
         .layers > .layer:last-child { margin: 0 20px; }
 
@@ -159,7 +160,8 @@
         .others { margin-top: 72px; }
         .others h3 { margin: 0 0 12px; font-size: 18px; }
         .tr { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr) 11rem; gap: 16px; align-items: center; padding: 14px 20px; text-decoration: none; }
-        .tr + .tr { border-top: 1px solid var(--border); }
+        .tlist { list-style: none; margin: 0; padding: 0; }
+        .tlist > li { border-top: 1px solid var(--border); }
         .tr.th { padding-block: 10px; font-family: var(--mono); font-size: 11.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; background-color: var(--surface-2); }
         .tr b { font-weight: 600; }
         .tr span { color: var(--muted); font-size: 14px; }
@@ -275,6 +277,7 @@
             .tr { grid-template-columns: 1fr auto; }
             .tr .ind { grid-column: 1; grid-row: 2; margin-top: -10px; }
             .tr.th { display: none; }
+            .tlist > li:first-child { border-top: 0; }
             .work-text h3 { font-size: 23px; }
             .feature-text { padding: 24px 20px; }
             .ai-head, .ai-flow, .ai-human { padding-left: 18px; padding-right: 18px; }
@@ -305,7 +308,7 @@
 
     <footer class="site-foot" id="foot"></footer>
 
-    <script src="assets/site.js?v=2026-11-18"></script>
+    <script src="assets/site.js?v=2026-11-18b"></script>
     <script>
         setupPage('portfolio');
 
@@ -436,7 +439,7 @@
                     <div class="reveal" style="--i:2">${heroFigure()}</div>
                 </section>
 
-                <dl class="panel spec reveal" style="--i:3" aria-label="${t('pf.spec')}">
+                <dl class="panel spec reveal" style="--i:3">
                     <div><dt>${t('pf.stat.years')}</dt><dd>${exp}+</dd></div>
                     <div><dt>${t('pf.stat.companies')}</dt><dd>${r.experience.length}</dd></div>
                     <div><dt>${t('pf.stat.projects')}</dt><dd>${r.projects.length}</dd></div>
@@ -477,14 +480,16 @@
                     ${others.length ? `
                     <div class="others">
                         <h3>${t('pf.others')}</h3>
-                        <div class="panel" role="table">
-                            <div class="tr th" role="row"><span role="columnheader">${t('pf.th.project')}</span><span role="columnheader">${t('pf.th.industry')}</span><span role="columnheader">${t('pf.th.site')}</span></div>
-                            ${others.map(p => `
-                                <${p.url ? `a href="${esc(p.url)}"${ext(p.url)}` : 'div'} class="tr" role="row">
-                                    <b role="cell">${esc(p.name)}</b>
-                                    <span class="ind" role="cell">${esc(p.industry)}</span>
-                                    <span class="dom" role="cell">${esc(p.domain)}</span>
-                                </${p.url ? 'a' : 'div'}>`).join('')}
+                        <div class="panel">
+                            <div class="tr th" aria-hidden="true"><span>${t('pf.th.project')}</span><span>${t('pf.th.industry')}</span><span>${t('pf.th.site')}</span></div>
+                            <ul class="tlist">
+                                ${others.map(p => `
+                                <li><${p.url ? `a href="${esc(p.url)}"${ext(p.url)}` : 'div'} class="tr">
+                                    <b>${esc(p.name)}</b>
+                                    <span class="ind">${esc(p.industry)}</span>
+                                    <span class="dom">${esc(p.domain)}</span>
+                                </${p.url ? 'a' : 'div'}></li>`).join('')}
+                            </ul>
                         </div>
                     </div>` : ''}
                 </section>
@@ -512,7 +517,7 @@
                     <div class="panel ticks ai">
                         ${r.ai.example ? `<div class="ai-head"><span>${t('pf.ai.example')}</span><b>${esc(r.ai.example.name)}</b>${r.ai.example.files.map(f => `<code>${esc(f)}</code>`).join('')}</div>` : ''}
                         <div class="ai-body">
-                            <ol class="ai-flow" aria-label="${esc(t('pf.ai.flow'))}">
+                            <ol class="ai-flow">
                                 ${r.ai.flow.map((s, i) => `
                                     <li class="ai-step${s.job === 'gate' ? ' gate' : ''}">
                                         <i>${s.job === 'gate' ? check : pad(i + 1)}</i>
@@ -577,7 +582,7 @@
                     <p>${t('pf.contact.p')}</p>
                     <div class="cta">
                         ${email ? `<a class="btn" href="${esc(email.url)}">${icon('mail', 17)}${esc(email.value)}</a>` : ''}
-                        ${phone ? `<a class="btn ghost" href="${esc(phone.url)}">${icon('phone', 17)}${esc(phone.value)}</a>` : ''}
+                        ${phone ? `<a class="btn ghost" href="${esc(phone.url)}">${icon('phone', 17)}${linkText(phone)}</a>` : ''}
                         <a class="btn ghost" href="./">${t('nav.card')}</a>
                     </div>
                 </section>`;

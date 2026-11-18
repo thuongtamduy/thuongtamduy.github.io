@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/site.css?v=2026-11-18">
+    <link rel="stylesheet" href="assets/site.css?v=2026-11-18b">
     <link rel="alternate" hreflang="vi" href="https://thuongtamduy.com/cv.html">
     <link rel="alternate" hreflang="en" href="https://thuongtamduy.com/cv.html?lang=en">
 
@@ -70,6 +70,7 @@
         }
         h2::after { content: ''; flex: 1; height: 1px; background: var(--border); }
         .summary { margin: 0; font-size: 15.5px; }
+        .ai-note { margin-top: 10px; }
 
         /* Timeline */
         .timeline { list-style: none; margin: 0; padding: 0; }
@@ -254,7 +255,7 @@
 
     <footer class="site-foot" id="foot"></footer>
 
-    <script src="assets/site.js?v=2026-11-18"></script>
+    <script src="assets/site.js?v=2026-11-18b"></script>
     <script>
         setupPage('cv');
         $('print').innerHTML = icon('printer', 17) + t('cv.print');
@@ -282,7 +283,7 @@
                         <h1>${esc(r.name)}</h1>
                         <p class="role">${esc(r.title)}<span class="mono">${t('years', years(r.since))}</span></p>
                         <ul class="contacts">
-                            ${r.contact.map(c => `<li><a href="${esc(c.url)}"${ext(c.url)}>${icon(c.icon, 15)}${esc(c.value)}</a></li>`).join('')}
+                            ${r.contact.map(c => `<li><a href="${esc(c.url)}"${ext(c.url)}>${icon(c.icon, 15)}${linkText(c)}</a></li>`).join('')}
                         </ul>
                     </div>
                 </header>
@@ -292,6 +293,7 @@
                         <section>
                             <h2>${t('cv.about')}</h2>
                             <p class="summary">${esc(r.summary)}</p>
+                            ${r.ai ? `<p class="summary ai-note"><b>${t('cv.ai')}.</b> ${t('pf.ai.p')}</p>` : ''}
                         </section>
 
                         <section>
@@ -312,7 +314,7 @@
 
                     </div>
 
-                    <aside class="cv-side">
+                    <div class="cv-side">
                         <section>
                             <h2>${t('cv.skills')}</h2>
                             ${r.skills.map(s => `
@@ -338,7 +340,7 @@
                             <h2>${t('cv.spoken')}</h2>
                             ${r.spoken.map(l => `<div class="side-item"><b>${esc(l.name)}</b><span>${esc(l.level)}</span></div>`).join('')}
                         </section>` : ''}
-                    </aside>
+                    </div>
                 </div>
 
                 <div class="cv-wide">
